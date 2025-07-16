@@ -50,75 +50,115 @@
         </div>
     </div>
 
-    <header class="main__header header__function">
-        <div class="container">
-            <div class="row">
-                <div class="main__header__wrapper">
-                    <div class="main__nav">
-                        <div class="navigation d-none d-lg-block">
-                            <nav class="navigation__menu" id="main__menu">
-                                <ul class="list-unstyled">
-                                    <li class="navigation__menu--item">
-                                        <a href="index.html" class="navigation__menu--item__link">Home</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item has-child has-arrow">
-                                        <a href="#" class="navigation__menu--item__link">Rooms</a>
-                                        <ul class="submenu sub__style" role="menu">
-                                            <li role="menuitem">
-                                                <a href="room-one.html">Room Category</a>                                        
-                                            </li>
-                                            <!-- <li>
-                                                <a href="room-details-1.html">Room Details</a>
-                                            </li> -->
-                                        </ul>
-                                    </li>
-
-                                    <li class="navigation__menu--item has-child has-arrow">
-                                        <a href="#" class="navigation__menu--item__link">Explore</a>
-                                        <ul class="submenu sub__style" role="menu">
-                                            <li role="menuitem"><a href="about.html">About</a></li>
-                                            <li role="menuitem"><a href="gallery.html">Gallery</a></li>
-                                            <li role="menuitem"><a href="service.html">Service</a></li>
-
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="navigation__menu--item">
-                                        <a href="resturant.html" class="navigation__menu--item__link">Restaurant</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item">
-                                        <a href="spa.html" class="navigation__menu--item__link">Spa</a>
-                                    </li>
-                                    
-                                    <li class="navigation__menu--item">
-                                        <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item">
-                                        <a href="contact.html" class="navigation__menu--item__link">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                    </div>
-                    <div class="main__logo">
-                        <a href="index.html"><img class="logo__class" src="assets/images/logo/logo.svg" alt="moonlit"></a>
-                    </div>
-                    <div class="main__right">
-                        <!-- <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Login Button" data-bs-toggle="modal" data-bs-target="#loginModal"><span>Sign In</span></a>
-                        <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Sign Up Button" data-bs-toggle="modal" data-bs-target="#signupModal"><span>Sign Up</span></a> -->
-                        <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
-                        <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <style>
+        .main__header__wrapper {
+           display: flex;
+           align-items: center;
+           width: 100%; /* Ensure full width */
+       }
+       
+       .main__logo {
+           flex: 0 0 auto;
+           margin-left: -80px; /* Shift logo a bit to the left */
+       }
+       /* Mobile View */
+@media screen and (max-width: 767px) {
+    .main__logo {
+        margin-left: 10px; /* Adjust this value to shift the logo to the right */
+    }
+}
+       .main__nav-wrapper {
+           flex: 1; /* Allow this section to take up the remaining space */
+           display: flex;
+           justify-content: center; /* Center the navbar content */
+           margin-left: 20px; /* Adjust navbar to move slightly to the right */
+       }
+       
+       .main__nav {
+           display: flex;
+           justify-content: center;
+           width: 100%; /* Make navbar take full available space */
+       }
+       
+       .main__right {
+           flex: 0 0 auto;
+           display: flex;
+           align-items: center;
+           margin-left: auto; /* Pushes the "Book Now" button to the far right */
+       }
+       
+       .theme-btn {
+           margin-left: 20px; /* Adjust to push button slightly more to the right if needed */
+       }
+       
+           </style>
+         <header class="main__header header__function">
+           <div class="container">
+               <div class="row">
+                   <div class="main__header__wrapper">
+                       <!-- Logo (keeps position) -->
+                       <div class="main__logo">
+                           <a href="index.html">
+                               <img class="logo__class" src="assets/newimages/final logo-01.jpg" alt="moonlit" style="width: 129px; height: 100px;">
+                           </a>
+                       </div>
+       
+                       <!-- Navbar Wrapper (for shifting) -->
+                       <div class="main__nav-wrapper">
+                           <div class="main__nav">
+                               <div class="navigation d-none d-lg-block">
+                                   <nav class="navigation__menu" id="main__menu">
+                                       <ul class="list-unstyled">
+                                           <li class="navigation__menu--item">
+                                               <a href="index.html" class="navigation__menu--item__link">Home</a>
+                                           </li>
+                                           <li class="navigation__menu--item has-child has-arrow">
+                                               <a href="#" class="navigation__menu--item__link">Rooms</a>
+                                               <ul class="submenu sub__style" role="menu">
+                                                   <li role="menuitem">
+                                                       <a href="room-one.html">Room Category</a>                                        
+                                                   </li>
+                                               </ul>
+                                           </li>
+                                           <li class="navigation__menu--item has-child has-arrow">
+                                               <a href="#" class="navigation__menu--item__link">Explore</a>
+                                               <ul class="submenu sub__style" role="menu">
+                                                   <li role="menuitem"><a href="about.html">About</a></li>
+                                                   <li role="menuitem"><a href="gallery.html">Gallery</a></li>
+                                                   <li role="menuitem"><a href="service.html">Service</a></li>
+                                               </ul>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="resturant.html" class="navigation__menu--item__link">Spicy Restaurant</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="spa.html" class="navigation__menu--item__link">Spa</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="contact.html" class="navigation__menu--item__link">Contact</a>
+                                           </li>
+                                       </ul>
+                                   </nav>
+                               </div>
+                           </div>
+                       </div>
+       
+                       <!-- Right Section -->
+                       <div class="main__right">
+                           <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
+       
+                           <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="position: absolute; top: 0; right: 10px;">
                             <span><img src="assets/images/icon/menu-icon.svg" alt=""></span>
                         </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </header>
+       
     <!-- header area end -->
 
     <!-- page header -->
@@ -127,7 +167,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-12">
                     <div class="page__hero__content">
-                        <h1 class="wow fadeInUp">The Restaurant</h1>
+                        <h1 class="wow fadeInUp">Spicy Restaurant</h1>
                         <p class="wow fadeInUp font-sm">Whether you are in the mood for a leisurely breakfast, a business lunch, or a romantic dinner.</p>
                     </div>
                 </div>
@@ -246,599 +286,480 @@
                 <div class="col-12">
                     <div class="resturant__menu__list">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Small Plates</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cold" aria-controls="cold">Cold Appetizers</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vegan" aria-controls="vegan">Vegetarian & Vegan</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#burger" type="button" role="tab" aria-controls="burger" aria-selected="true">Burgers & Sandwiches</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dips" aria-controls="dips">Dips & Spreads</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#seafood" aria-controls="seafood">Seafood Specialties</button>
+                            <button class="nav-link active " data-bs-toggle="tab" data-bs-target="#brea" type="button" role="tab" aria-controls="all" aria-selected="true"> Breakfast Menu</button>
+                            <button class="nav-link " data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true"> Soups And Salads</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cold" aria-controls="cold">Starters(Veg & Non-Veg)</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vegan" aria-controls="vegan"> Tandoori & Seafood</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#burger" type="button" role="tab" aria-controls="burger" aria-selected="true">Main Course</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dips" aria-controls="dips">Rice & Noodles</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#seafood" aria-controls="seafood">Desserts & Beverages</button>
+                            
                         </div>
                     </div>
+                    <style>
+                    /* Make the tab buttons smaller */
+.nav-link {
+    padding: 16px 22px; /* Reduces padding to make the button smaller */
+    font-size: 14px; /* Adjust the font size */
+    height: auto; /* Ensure the height is auto-adjusted */
+}
+
+.nav-link.active {
+    font-weight: bold; /* Optional: make the active button slightly bolder */
+}
+
+.nav-tabs {
+    margin-bottom: 15px; /* Adjust the bottom margin if needed */
+}
+
+                    .price {
+                        font-weight: bold;
+                        color: #ab8a62; /* Or any color you prefer */
+                        float: right;
+                    }
+                    
+                    h5 {
+                        font-size: 1.2rem;
+                        color: #333;
+                        margin-top: 20px;
+                    }
+                    
+                    ul {
+                        padding-left: 20px;
+                        margin-bottom: 20px;
+                    }
+                    
+                    ul li {
+                        padding: 5px 0;
+                    }
+                    </style>
+
                     <!-- resturant menu content -->
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="cold">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="brea" role="tabpanel" aria-labelledby="nav-brea-tab">
+                            <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col-md-6">
+                                    <h5>BREAKFAST MENU</h5>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
+                                    <ul>
+                                        <li>Idly (4 Pcs) <span class="price">₹99</span></li>
+                                        <li>Plain Dosa (1 Pcs) <span class="price">₹80</span></li>
+                                        <li>Kal Dosa (2 Pcs) <span class="price">₹90</span></li>
+                                        <li>Podi Dosa (1 Pcs) <span class="price">₹100</span></li>
+                                        <li>Onion Dosa (1 Pcs) <span class="price">₹100</span></li>
+                                        <li>Ghee Dosa (1 Pcs) <span class="price">₹110</span></li>
+                                        <li>Egg Dosa (1 Pcs) <span class="price">₹120</span></li>
+                                        <li>Pongal <span class="price">₹120</span></li>
+                                        <li>Vada (2 Pcs) <span class="price">₹50</span></li>
+                                    </ul>
+                                    <h5>AROUND THE CLOCK</h5>
+                                    <ul>
+                                  
+                                        <li>Seasonal Fresh Fruit Juice <span class="price">₹89</span></li>
+                                        <li>Choice Of Milk Shakes <span class="price">₹89</span></li>
+                                        <li>Choice of Milk Shakes with Ice Cream <span class="price">₹99</span></li>
+                                        <li>Aerator Soft Drinks <span class="price">₹69</span></li>
+                                        <li>Packaged Drinking Water <span class="price">₹29</span></li>
+                                        <li>Fresh Lime Soda / Juice <span class="price">₹69</span></li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="vegan" role="tabpanel" aria-labelledby="vegan">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
+                    
+                                <!-- Column 2 -->
+                                <div class="col-md-6">
+                                    <h5>BREAKFAST MENU BEVERAGES</h5>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
+                                    <ul>
+                                        
+                                        <li>Tea <span class="price">₹59</span></li>
+                                        <li>Ginger Tea <span class="price">₹69</span></li>
+                                        <li>Poori Bhaji (2 Pcs) <span class="price">₹120</span></li>
+                                        <li>Coffee <span class="price">₹69</span></li>
+                                        <li>Channa Bhatura (2 Pcs) <span class="price">₹140</span></li>
+                                        <li>Milk <span class="price">₹49</span></li>
+                                        <li>Egg to Order <span class="price">₹69</span></li>
+                                        <li>Bournvita / Horlicks / Boost <span class="price">₹69</span></li>
+                                    </ul>
+                                    <ul>
+                                        <h5>EXTRAS</h5>
 
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="dips" role="tabpanel" aria-labelledby="dips">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="seafood">
-                            <div class="all__menu__list">
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/3.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/4.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                </div>
-
-                                <div class="single__menu__item__list">
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/5.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
-                                    <!-- single menu item -->
-                                    <div class="single__menu__item">
-                                        <div class="menu__thumb">
-                                            <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
-                                        </div>
-                                        <div class="menu__meta">
-                                            <div class="menu__link__price">
-                                                <a href="#" class="h6">Classic Bolognese with Fresh</a>
-                                                <span class="h6">$120</span>
-                                            </div>
-                                            <span>Salted caramel,Puff pastry,salad</span>
-                                        </div>
-                                    </div>
-                                    <!-- single menu item end -->
+                                        <li>Choice of Pakoda (Onion / Mix Veg) <span class="price">₹149</span></li>
+                                        <li>Paneer Pakoda <span class="price">₹179</span></li>
+                                        <li>French Fries <span class="price">₹139</span></li>
+                                        <li>Potato Wedges <span class="price">₹139</span></li>
+                                        <li>Smiles <span class="price">₹99</span></li>
+                                        <li>Fish Finger <span class="price">₹199</span></li>
+                                        <li>Cheese Potato Shots <span class="price">₹139</span></li>
+                                        <li>Papad (2 No's) <span class="price">₹30</span></li>
+                                        <li>Masala Papad <span class="price">₹80</span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- resturant menu content end -->
+                    
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade " id="all" role="tabpanel" aria-labelledby="nav-all-tab">
+                            <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col-md-6">
+                                    <h5>SOUP VEG</h5>
+                                    <ul>
+                                        <li>Sweetcorn Veg Soup <span class="price">₹109</span></li>
+                                        <li>Hot Pepper Veg Soup <span class="price">₹109</span></li>
+                                        <li>Veg Clear Soup <span class="price">₹109</span></li>
+                                        <li>Veg Manchow Soup <span class="price">₹109</span></li>
+                                        <li>Lemon Coriander Soup <span class="price">₹109</span></li>
+                                    <h5>SOUP NON-VEG</h5>
+                                        <li>Sweet Corn Chicken Soup <span class="price">₹139</span></li>
+                                        <li>Lentil & Chicken Soup <span class="price">₹139</span></li>
+                                        <li>Creamy Baked Chicken Soup <span class="price">₹139</span></li>
+                                        <li>Mix Non Veg Clear Soup <span class="price">₹159</span></li>
+                                        <li>Mutton Soup <span class="price">₹169</span></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 2 -->
+                                <div class="col-md-6">
+                    
+                                    <h5>SALADS VEG</h5>
+                                    <ul>
+                                        <li>Garden Green Salad <span class="price">₹129</span></li>
+                                        <li>Waldorf Salad <span class="price">₹149</span></li>
+                                        <li>Russian Salad <span class="price">₹149</span></li>
+                                        <li>Onion Salad with Lime <span class="price">₹79</span></li>
+                                        <li>Fruit Salad <span class="price">₹149</span></li>
+                                    </ul>
+                    
+                                    <h5>SALADS NON-VEG</h5>
+                                    <ul>
+                                        <li>Waldorf Chicken Salad <span class="price">₹189</span></li>
+                                        <li>Mix Meat Salad <span class="price">₹229</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="nav-cold-tab">
+                            <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col-md-6">
+                                    <h5>Veg Starters</h5>
+                                    <ul>
+                                        <li>Mushroom Veppudu <span class="price">₹199</span></li>
+                                        <li>Mushroom Pepper Fry <span class="price">₹199</span></li>
+                                        <li>Mushroom 65 <span class="price">₹199</span></li>
+                                        <li>Mushroom Manchurian Dry <span class="price">₹199</span></li>
+                                        <li>Chilli Mushroom <span class="price">₹199</span></li>
+                                        <li>Gobi Manchurian Dry <span class="price">₹179</span></li>
+                                        <li>Cauliflower Veppudu <span class="price">₹179</span></li>
+                                        <li>Gobi 65 <span class="price">₹179</span></li>
+                                        <li>Chilli Gobi <span class="price">₹179</span></li>
+                                        <li>Baby Corn Manchurian <span class="price">₹199</span></li>
+                                        <li>Baby Corn 65 <span class="price">₹199</span></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 2 -->
+                                <div class="col-md-6">
+                                    <h5>Non-Veg Starters</h5>
+                                    <ul>
+                                        <li>Paneer 65 <span class="price">₹229</span></li>
+                                        <li>Chilli Paneer <span class="price">₹229</span></li>
+                                        <li>Chicken 65 <span class="price">₹229</span></li>
+                                        <li>Paneer Manchurian <span class="price">₹229</span></li>
+                                        <li>Chicken Lollipop <span class="price">₹249</span></li>
+                                        <li>Chicken Pepper Fry <span class="price">₹289</span></li>
+                                        <li>Kozhi Varuval <span class="price">₹289</span></li>
+                                        <li>Chinna Vengayam Kozhi Politchathu <span class="price">₹289</span></li>
+                                        <li>Chilli Chicken <span class="price">₹289</span></li>
+                                        <li>Chicken Manchurian <span class="price">₹289</span></li>
+                                        <li>Palli Palayam Chicken Dry <span class="price">₹289</span></li>
+                                        <li>Nattu Kozhi Varuval <span class="price">₹319</span></li>
+                                        <li>Chilli Baby Corn <span class="price">₹199</span></li>
+                                        <li>Baby Corn Veppudu <span class="price">₹199</span></li>
+                                        <li>Chilli Baby Corn <span class="price">₹199</span></li>
+                                        <li>Baby Corn Paper Fry <span class="price">₹199</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="vegan" role="tabpanel" aria-labelledby="nav-vegan-tab">
+                            <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col-md-6">
+                                    <h5>Tandoori</h5>
+                                    <ul>
+                                        <li>Paneer Tikka <span class="price">₹239</span></li>
+                                        <li>Chicken Tikka <span class="price">₹289</span></li>
+                                        <li>Tandoori Prawns <span class="price">₹319</span></li>
+                                        <li>Tandoori Chicken Half <span class="price">₹399</span></li>
+                                        <li>Tandoori Chicken Full <span class="price">₹599</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h5>Seafood</h5>
+                                    <ul>
+                                        <li>Tawa Fried Fish (Parra Fish) <span class="price">₹179</span></li>
+                                        <li>Fish 65 <span class="price">₹179</span></li>
+                                        <li>Fish Politchathu <span class="price">₹199</span></li>
+                                        <li>Fish Finger <span class="price">₹199</span></li>
+                                        <li>Kurumilagu Yara Fry <span class="price">₹319</span></li>
+                                        <li>Prawn 65 <span class="price">₹319</span></li>
+                                        <li>Crab Lollipop <span class="price">₹199</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="nav-burger-tab">
+                            <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col-md-6">
+                                    <h5>Veg Gravy</h5>
+                                    <ul>
+                                        <li>Kadai Subji <span class="price">₹229</span></li>
+                                        <li>Veg Jalfrezi <span class="price">₹229</span></li>
+                                        <li>Veg Chettinadu Curry <span class="price">₹229</span></li>
+                                        <li>Aloo Gobi Masala <span class="price">₹229</span></li>
+                                        <li>Aloo Mutter Curry <span class="price">₹229</span></li>
+                                        <li>Kaju Dingri Kofta Curry <span class="price">₹249</span></li>
+                                        <li>Dhal Fry/Tadka <span class="price">₹229</span></li>
+                                        <li>Egg Gravy <span class="price">₹229</span></li>
+                                        <li>Veg Kothu Paratha <span class="price">₹189</span></li>
+                                        <li>Karuveppilai Veg Curry <span class="price">₹229</span></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 2 -->
+                                <div class="col-md-6">
+                                    <h5>Non-Veg Gravy</h5>
+                                    <ul>
+                                        <li>Andhra Chicken Curry <span class="price">₹299</span></li>
+                                        <li>Kali Mirchi Chicken Curry <span class="price">₹299</span></li>
+                                        <li>Malabar Prawn Curry <span class="price">₹349</span></li>
+                                        <li>Thenga Aracha Meen Kozhambu <span class="price">₹289</span></li>
+                                        <li>Nattu Kozhi Curry <span class="price">₹349</span></li>
+                                        <li>Mutton Chukka <span class="price">₹349</span></li>
+                                        <li>Mutton Pepper Fry <span class="price">₹349</span></li>
+                                        <li>Chettinadu Mutton Curry <span class="price">₹379</span></li>
+                                        <li>Mutton Kalakki <span class="price">₹129</span></li>
+                                        <li>Kosha Mangsho Mutton <span class="price">₹379</span></li>
+                                        <li>Badami Lamb Kurma <span class="price">₹379</span></li>
+                                        <li>Chettinadu Chicken Curry <span class="price">₹299</span></li>
+                                        <li>Murugh Tikka Masala <span class="price">₹299</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="dips" role="tabpanel" aria-labelledby="nav-dips-tab">
+                            <div class="row">
+                                <!-- Column 1: Veg Biryani & Pulao -->
+                                <div class="col-md-6">
+                                    <h5>Veg Biryani & Pulao</h5>
+                                    <ul>
+                                        <li>Veg Biriyani <span class="price">₹219</span></li>
+                                        <li>Mix Veg Biriyani <span class="price">₹239</span></li>
+                                        <li>Paneer Biriyani <span class="price">₹229</span></li>
+                                        <li>Baby Corn Biriyani <span class="price">₹229</span></li>
+                                        <li>Egg Biriyani <span class="price">₹269</span></li>
+                                        <li>Mushroom Biriyani <span class="price">₹229</span></li>
+                                        <li>Veg Pulao <span class="price">₹209</span></li>
+                                        <li>Mushroom Pulao <span class="price">₹209</span></li>
+                                        <li>Veg Fried Rice <span class="price">₹219</span></li>
+                                        <li>Mix Veg Fried Rice <span class="price">₹239</span></li>
+                                        <li>Paneer Fried Rice <span class="price">₹229</span></li>
+                                        <li>Baby Corn Fried Rice <span class="price">₹229</span></li>
+                                        <li>Mushroom Fried Rice <span class="price">₹229</span></li>
+                                        <li>Bisibelabath <span class="price">₹209</span></li>
+                                        <li>Veg Thali Meals <span class="price">₹350</span></li>
+                                    </ul>
+                                    <h5>Other Rice</h5>
+                                    <ul>
+                                        <li>Steamed Rice <span class="price">₹69</span></li>
+                                        <li>Jeera Rice <span class="price">₹199</span></li>
+                                        <li>Ghee Rice <span class="price">₹199</span></li>
+                                        <li>Plain Biriyani <span class="price">₹199</span></li>
+                                        <li>Cashew Pulao <span class="price">₹229</span></li>
+                                    </ul>
+
+                                   
+                                </div>
+
+                                
+                    
+                                <!-- Column 2: Non-Veg Fried Rice & Biryani -->
+                                <div class="col-md-6">
+                                   
+
+                                    <h5>Non-Veg Fried Rice & Biryani</h5>
+                                    <ul>
+                                        <li>Chicken Fried Rice <span class="price">₹289</span></li>
+                                        <li>Mutton Fried Rice <span class="price">₹389</span></li>
+                                        <li>Prawn Fried Rice <span class="price">₹349</span></li>
+                                        <li>Fish Fry Biriyani <span class="price">₹299</span></li>
+                                        <li>Chicken Biriyani <span class="price">₹299</span></li>
+                                        <li>Mutton Biriyani <span class="price">₹389</span></li>
+                                        <li>Prawn Biriyani <span class="price">₹349</span></li>
+                                        <li>Nattu Kozhi Biriyani <span class="price">₹349</span></li>
+                                        <li>Fish Biryani <span class="price">₹299</span></li>
+                                        <li>Egg Fried Rice <span class="price">₹269</span></li>
+                                    </ul>
+                    
+                                    <h5>Noodles</h5>
+                                    <ul>
+                                        <li>Veg Noodles <span class="price">₹219</span></li>
+                                        <li>Mix Veg Noodles <span class="price">₹239</span></li>
+                                        <li>Paneer Noodles <span class="price">₹229</span></li>
+                                        <li>Baby Corn Noodles <span class="price">₹229</span></li>
+                                        <li>Egg Noodles <span class="price">₹269</span></li>
+                                        <li>Chicken Noodles <span class="price">₹289</span></li>
+                                        <li>Mix Meat Noodles <span class="price">₹399</span></li>
+                                        <li>Prawn Noodles <span class="price">₹349</span></li>
+                                    </ul>
+                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="nav-seafood-tab">
+                            <div class="row">
+                                <!-- Column 1: Desserts -->
+                                <div class="col-md-6">
+                                    <h5>Desserts</h5>
+                                    <ul>
+                                        <li>Gulab Jamun (2 Pcs) <span class="price">₹99</span></li>
+                                        <li>Gulab Jamun with Ice Cream <span class="price">₹129</span></li>
+                                        <li>Fried Ice Cream (2 Pcs) <span class="price">₹169</span></li>
+                                        <li>Choice of Ice Cream <span class="price">₹79</span></li>
+                                        <li>Cut Fruit with Ice Cream <span class="price">₹159</span></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 2: Beverages -->
+                                <div class="col-md-6">
+                                    <h5>Beverages</h5>
+                                    <ul>
+                                        <li>Seasonal Fresh Fruit Juice <span class="price">₹89</span></li>
+                                        <li>Choice of Milk Shakes <span class="price">₹89</span></li>
+                                        <li>Fresh Lime Soda / Juice <span class="price">₹69</span></li>
+                                        <li>Aerator Soft Drinks <span class="price">₹69</span></li>
+                                        <li>Tea <span class="price">₹59</span></li>
+                                        <li>Ginger Tea <span class="price">₹69</span></li>
+                                        <li>Coffee <span class="price">₹69</span></li>
+                                        <li>Milk <span class="price">₹49</span></li>
+                                        <li>Bournvita / Horlicks / Boost <span class="price">₹69</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+    <!-- restaurant menu end -->
+
+
+
+    <!-- <div class="tab-pane fade" id="dips" role="tabpanel" aria-labelledby="dips">
+        <div class="all__menu__list">
+            <div class="single__menu__item__list">
+                <div class="single__menu__item">
+                    <div class="menu__thumb">
+                        <img height="78" width="78" src="assets/images/pages/resturant/1.jpg" alt="">
+                    </div>
+                    <div class="menu__meta">
+                        <div class="menu__link__price">
+                            <a href="#" class="h6">Tuscan Herb-Crusted Chicken</a>
+                            <span class="h6">$120</span>
+                        </div>
+                        <span>Salted caramel,Puff pastry,salad</span>
+                    </div>
+                </div>
+                <div class="single__menu__item">
+                    <div class="menu__thumb">
+                        <img height="78" width="78" src="assets/images/pages/resturant/2.jpg" alt="">
+                    </div>
+                    <div class="menu__meta">
+                        <div class="menu__link__price">
+                            <a href="#" class="h6">Classic Bolognese with Fresh</a>
+                            <span class="h6">$120</span>
+                        </div>
+                        <span>Salted caramel,Puff pastry,salad</span>
+                    </div>
+                </div>
+            </div>
+              
+                <div class="single__menu__item">
+                    <div class="menu__thumb">
+                        <img height="78" width="78" src="assets/images/pages/resturant/6.jpg" alt="">
+                    </div>
+                    <div class="menu__meta">
+                        <div class="menu__link__price">
+                            <a href="#" class="h6">Classic Bolognese with Fresh</a>
+                            <span class="h6">$120</span>
+                        </div>
+                        <span>Salted caramel,Puff pastry,salad</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </div> -->
+
+
+<!-- Chef's Message Section -->
+<section class="rts__section section__padding bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Chef Image -->
+        <div class="col-lg-5 mb-4 mb-lg-0 wow fadeInLeft">
+          <img src="assets/newimages/srujan 4.jpg" alt="SS Silver Oaks Chef" class="img-fluid rounded shadow">
+        </div>
+        
+        <!-- Message Content -->
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay=".2s">
+          <div class="section__content__left">
+            <span class="h6 subtitle__icon__two d-block">Message from the Chef</span>
+            <h2 class="content__title h3 lh-1 mt-2">Welcome to Spicy Restaurant</h2>
+          </div>
+          <p class="font-sm mt-3">
+            The dining experience at <strong>Spicy Restaurant</strong> will take you on a culinary journey through authentic Indian cuisine, making each moment memorable. Indulge in unforgettable meals and savor the finest South Indian, North Indian, and Continental dishes at one of the best restaurants in Yercaud — located inside <strong>SS Silver Oaks Resorts & Restaurant</strong>.
+          </p>
+          <p class="font-sm">
+            <strong>Spicy Restaurant</strong> is a three-meal restaurant offering multicuisine delights — desserts, grills, soups, salads, and a wide selection of beverages. Enjoy our comprehensive in-room dining options or dine in with a view of nature.
+          </p>
+          <p class="font-sm mb-3">
+            We sincerely thank you for choosing Spicy Restaurant.
+          </p>
+          <p class="fw-bold mb-0">Yours Sincerely,</p>
+          <p class="fw-bold">Executive Chef<br>SS Silver Oaks Resorts & Restaurants</p>
+        </div>
+      </div>
     </div>
-    <!-- restaurant menu end -->
+  </section>
+  
+
 
     <!-- client testimonial  -->
     <div class="rts__section testimonial section__padding">
@@ -1090,7 +1011,7 @@
                     <div class="offcanvase__top">
                         <div class="offcanvase__logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo__two.svg" alt="logo">
+                                <img src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="logo">
                             </a>
                         </div>
                         <p class="description">
@@ -1148,7 +1069,7 @@
                                 </li>
 
                                 <li class="slide has__children">
-                                    <a class="slide__menu__item" href="resturant.html">Restaurants
+                                    <a class="slide__menu__item" href="resturant.html">Spicy Restaurants
                                     </a>
                                 </li>
                                 <li class="slide has__children">
@@ -1204,7 +1125,7 @@
             <div class="row">
                 <div class="footer__widget__wrapper">
                     <div class="rts__widget">
-                        <a href="index.html"><img class="footer__logo" src="assets/images/logo/logo.svg" alt="footer logo"></a>
+                        <a href="index.html"><img class="footer__logo" src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="footer logo"></a>
                         <p class="font-sm max-290 mt-20">
                             SS Silver Oaks is your serene escape nestled in the lush hills of Yercaud where comfort, charm, and nature come together in harmony.
                         </p>

@@ -49,10 +49,63 @@
             </div>
         </div>
     </div>
-    <header class="main__header header__function">
-        <div class="container">
-            <div class="row">
-                <div class="main__header__wrapper">
+    <style>
+ .main__header__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+}
+
+.main__logo {
+    flex: 0 0 auto;
+    margin-left: -80px; /* Shift logo a bit to the left */
+}
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+    .main__logo {
+        margin-left: 10px; /* Adjust this value to shift the logo to the right */
+    }
+}
+
+.main__nav-wrapper {
+    flex: 1; /* Allow this section to take up the remaining space */
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+    margin-left: 20px; /* Adjust navbar to move slightly to the right */
+}
+
+.main__nav {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Make navbar take full available space */
+}
+
+.main__right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the "Book Now" button to the far right */
+}
+
+.theme-btn {
+    margin-left: 20px; /* Adjust to push button slightly more to the right if needed */
+}
+
+    </style>
+  <header class="main__header header__function">
+    <div class="container">
+        <div class="row">
+            <div class="main__header__wrapper">
+                <!-- Logo (keeps position) -->
+                <div class="main__logo">
+                    <a href="index.html">
+                        <img class="logo__class" src="assets/newimages/final logo-01.jpg" alt="moonlit" style="width: 129px; height: 100px;">
+                    </a>
+                </div>
+
+                <!-- Navbar Wrapper (for shifting) -->
+                <div class="main__nav-wrapper">
                     <div class="main__nav">
                         <div class="navigation d-none d-lg-block">
                             <nav class="navigation__menu" id="main__menu">
@@ -60,66 +113,54 @@
                                     <li class="navigation__menu--item">
                                         <a href="index.html" class="navigation__menu--item__link">Home</a>
                                     </li>
-
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="#" class="navigation__menu--item__link">Rooms</a>
                                         <ul class="submenu sub__style" role="menu">
                                             <li role="menuitem">
                                                 <a href="room-one.html">Room Category</a>                                        
                                             </li>
-                                            <!-- <li>
-                                                <a href="room-details-1.html">Room Details</a>
-                                            </li> -->
                                         </ul>
                                     </li>
-
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="#" class="navigation__menu--item__link">Explore</a>
                                         <ul class="submenu sub__style" role="menu">
                                             <li role="menuitem"><a href="about.html">About</a></li>
                                             <li role="menuitem"><a href="gallery.html">Gallery</a></li>
                                             <li role="menuitem"><a href="service.html">Service</a></li>
-
                                         </ul>
                                     </li>
-                                    
                                     <li class="navigation__menu--item">
-                                        <a href="resturant.html" class="navigation__menu--item__link">Restaurant</a>
+                                        <a href="resturant.html" class="navigation__menu--item__link">Spicy Restaurant</a>
                                     </li>
-
                                     <li class="navigation__menu--item">
                                         <a href="spa.html" class="navigation__menu--item__link">Spa</a>
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
                                     </li>
-
                                     <li class="navigation__menu--item">
                                         <a href="contact.html" class="navigation__menu--item__link">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
+                    </div>
+                </div>
 
-                    </div>
-                    <div class="main__logo">
-                        <a href="index.html">
-                            <img class="logo__class" src="assets/newimages/Gemini_Generated_Image_nnwblgnnwblgnnwb (1) (2).png" alt="moonlit">
-                          </a>
-                          
-                    </div>
-                    <div class="main__right">
-                        <!-- <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Login Button" data-bs-toggle="modal" data-bs-target="#loginModal"><span>Sign In</span></a>
-                        <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Sign Up Button" data-bs-toggle="modal" data-bs-target="#signupModal"><span>Sign Up</span></a> -->
-                        <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
-                        <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <span><img src="assets/images/icon/menu-icon.svg" alt=""></span>
-                        </button>
-                    </div>
+                <!-- Right Section -->
+                <div class="main__right">
+                    <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
+
+                    <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="position: absolute; top: 0; right: 10px;">
+                        <span><img src="assets/images/icon/menu-icon.svg" alt=""></span>
+                    </button>
+                    
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
     <!-- header area end -->
 
     <!-- banner area -->
@@ -994,7 +1035,7 @@
                     <div class="offcanvase__top">
                         <div class="offcanvase__logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo__two.svg" alt="logo">
+                                <img src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="logo">
                             </a>
                         </div>
                         <p class="description">
@@ -1052,7 +1093,7 @@
                                 </li>
 
                                 <li class="slide has__children">
-                                    <a class="slide__menu__item" href="resturant.html">Restaurants
+                                    <a class="slide__menu__item" href="resturant.html">Spicy Restaurants
                                     </a>
                                 </li>
                                 <li class="slide has__children">
@@ -1109,7 +1150,7 @@
             <div class="row">
                 <div class="footer__widget__wrapper">
                     <div class="rts__widget">
-                        <a href="index.html"><img class="footer__logo" src="assets/images/logo/logo.svg" alt="footer logo"></a>
+                        <a href="index.html"><img class="footer__logo" src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="footer logo"></a>
                         <p class="font-sm max-290 mt-20">
                             SS Silver Oaks is your serene escape nestled in the lush hills of Yercaud  where comfort, charm, and nature come together in harmony.
                         </p>

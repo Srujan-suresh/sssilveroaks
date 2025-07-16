@@ -50,74 +50,115 @@
         </div>
     </div>
  
-    <header class="main__header header__function">
-        <div class="container">
-            <div class="row">
-                <div class="main__header__wrapper">
-                    <div class="main__nav">
-                        <div class="navigation d-none d-lg-block">
-                            <nav class="navigation__menu" id="main__menu">
-                                <ul class="list-unstyled">
-                                    <li class="navigation__menu--item">
-                                        <a href="index.html" class="navigation__menu--item__link">Home</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item has-child has-arrow">
-                                        <a href="#" class="navigation__menu--item__link">Rooms</a>
-                                        <ul class="submenu sub__style" role="menu">
-                                            <li role="menuitem">
-                                                <a href="room-one.html">Room Category</a>                                        
-                                            </li>
-                                            <!-- <li>
-                                                <a href="room-details-1.html">Room Details</a>
-                                            </li> -->
-                                        </ul>
-                                    </li>
-
-                                    <li class="navigation__menu--item has-child has-arrow">
-                                        <a href="#" class="navigation__menu--item__link">Explore</a>
-                                        <ul class="submenu sub__style" role="menu">
-                                            <li role="menuitem"><a href="about.html">About</a></li>
-                                            <li role="menuitem"><a href="gallery.html">Gallery</a></li>
-                                            <li role="menuitem"><a href="service.html">Service</a></li>
-
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="navigation__menu--item">
-                                        <a href="resturant.html" class="navigation__menu--item__link">Restaurant</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item">
-                                        <a href="spa.html" class="navigation__menu--item__link">Spa</a>
-                                    </li>
-                                    
-                                    <li class="navigation__menu--item">
-                                        <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
-                                    </li>
-
-                                    <li class="navigation__menu--item">
-                                        <a href="contact.html" class="navigation__menu--item__link">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="main__logo">
-                        <a href="index.html"><img class="logo__class" src="assets/images/logo/logo.svg" alt="moonlit"></a>
-                    </div>
-                    <div class="main__right">
-                        <!-- <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Login Button" data-bs-toggle="modal" data-bs-target="#loginModal"><span>Sign In</span></a>
-                        <a href="#" class="theme-btn btn-style sm-btn border d-none d-lg-block" aria-label="Sign Up Button" data-bs-toggle="modal" data-bs-target="#signupModal"><span>Sign Up</span></a> -->
-                        <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
-                        <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <style>
+        .main__header__wrapper {
+           display: flex;
+           align-items: center;
+           width: 100%; /* Ensure full width */
+       }
+       
+       .main__logo {
+           flex: 0 0 auto;
+           margin-left: -80px; /* Shift logo a bit to the left */
+       }
+       /* Mobile View */
+@media screen and (max-width: 767px) {
+    .main__logo {
+        margin-left: 10px; /* Adjust this value to shift the logo to the right */
+    }
+}
+       .main__nav-wrapper {
+           flex: 1; /* Allow this section to take up the remaining space */
+           display: flex;
+           justify-content: center; /* Center the navbar content */
+           margin-left: 20px; /* Adjust navbar to move slightly to the right */
+       }
+       
+       .main__nav {
+           display: flex;
+           justify-content: center;
+           width: 100%; /* Make navbar take full available space */
+       }
+       
+       .main__right {
+           flex: 0 0 auto;
+           display: flex;
+           align-items: center;
+           margin-left: auto; /* Pushes the "Book Now" button to the far right */
+       }
+       
+       .theme-btn {
+           margin-left: 20px; /* Adjust to push button slightly more to the right if needed */
+       }
+       
+           </style>
+         <header class="main__header header__function">
+           <div class="container">
+               <div class="row">
+                   <div class="main__header__wrapper">
+                       <!-- Logo (keeps position) -->
+                       <div class="main__logo">
+                           <a href="index.html">
+                               <img class="logo__class" src="assets/newimages/final logo-01.jpg" alt="moonlit" style="width: 129px; height: 100px;">
+                           </a>
+                       </div>
+       
+                       <!-- Navbar Wrapper (for shifting) -->
+                       <div class="main__nav-wrapper">
+                           <div class="main__nav">
+                               <div class="navigation d-none d-lg-block">
+                                   <nav class="navigation__menu" id="main__menu">
+                                       <ul class="list-unstyled">
+                                           <li class="navigation__menu--item">
+                                               <a href="index.html" class="navigation__menu--item__link">Home</a>
+                                           </li>
+                                           <li class="navigation__menu--item has-child has-arrow">
+                                               <a href="#" class="navigation__menu--item__link">Rooms</a>
+                                               <ul class="submenu sub__style" role="menu">
+                                                   <li role="menuitem">
+                                                       <a href="room-one.html">Room Category</a>                                        
+                                                   </li>
+                                               </ul>
+                                           </li>
+                                           <li class="navigation__menu--item has-child has-arrow">
+                                               <a href="#" class="navigation__menu--item__link">Explore</a>
+                                               <ul class="submenu sub__style" role="menu">
+                                                   <li role="menuitem"><a href="about.html">About</a></li>
+                                                   <li role="menuitem"><a href="gallery.html">Gallery</a></li>
+                                                   <li role="menuitem"><a href="service.html">Service</a></li>
+                                               </ul>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="resturant.html" class="navigation__menu--item__link">Spicy Restaurant</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="spa.html" class="navigation__menu--item__link">Spa</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
+                                           </li>
+                                           <li class="navigation__menu--item">
+                                               <a href="contact.html" class="navigation__menu--item__link">Contact</a>
+                                           </li>
+                                       </ul>
+                                   </nav>
+                               </div>
+                           </div>
+                       </div>
+       
+                       <!-- Right Section -->
+                       <div class="main__right">
+                           <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
+       
+                           <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="position: absolute; top: 0; right: 10px;">
                             <span><img src="assets/images/icon/menu-icon.svg" alt=""></span>
                         </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </header>
+       
     <!-- header area end -->
 
     <!-- page header -->
@@ -137,46 +178,141 @@
 
     
 
-
 <!-- Spa Section -->
 <section class="rts__section section__padding">
     <div class="container">
+  
+      <!-- Title -->
       <div class="row mb-5 text-center">
         <div class="col-lg-12">
           <span class="h6 subtitle__icon__two d-block wow fadeInUp">Unwind & Rejuvenate</span>
-          <h2 class="content__title h2 lh-1 wow fadeInUp">Spa & Wellness at SS Silver Oaks</h2>
-          <p class="sub__text mt-3 wow fadeInUp" data-wow-delay=".2s">
-            Experience serenity like never before in the lap of nature. Our spa services are crafted to relax, refresh, and revitalize your senses.
-          </p>
+          <h2 class="content__title h2 lh-1 wow fadeInUp">Silver Serenity Spa at SS Silver Oaks</h2>
         </div>
       </div>
   
-      <div class="row align-items-center">
-        <div class="col-lg-6 wow fadeInLeft">
-          <img src="assets/images/index-3/service/1.webp"  width="605" height="535" class="img-fluid rounded" alt="SS Silver Oaks Spa Room">
+      <!-- Spa Cards -->
+      <div class="row gy-4">
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🌿 Kerala Ayurvedic Massage</h5>
+              <p class="card-text font-sm">A traditional herbal massage done in synchrony by therapists to balance energy and relieve deep-rooted tension.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 60 mins | Price: ₹3000</p>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-delay=".2s">
-          <h3 class="h4 mb-3">Signature Treatments</h3>
-          <ul class="list-unstyled ps-3">
-            <li>🌿 Full Body Aromatherapy Massage</li>
-            <li>🌺 Ayurvedic Spa Rituals</li>
-            <li>🧖‍♀️ Hot Stone Therapy</li>
-            <li>💆‍♂️ Head, Neck & Shoulder Relief</li>
-            <li>🌸 Herbal Steam & Detox</li>
-            <li>🛀 Private Couple’s Spa Packages</li>
-          </ul>
-          <p class="mt-3 font-sm">
-            Our trained therapists use natural oils and healing techniques to ensure a deeply therapeutic experience. Whether you're recovering from a long journey or seeking a holistic escape, our spa is your personal sanctuary.
-          </p>
-          <a href="contact.html" class="theme-btn btn-style mt-3"><span>Book a Session</span></a>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">💪 Deep Tissue Massage</h5>
+              <p class="card-text font-sm">Targets deep muscle layers with slow, firm pressure to reduce pain and improve posture.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 60 mins | Price: ₹3000</p>
+            </div>
+          </div>
         </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🌸 Aroma Massage</h5>
+              <p class="card-text font-sm">Uses essential oils to calm the mind, relieve stress, and promote overall emotional well-being.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 60 mins | Price: ₹3000</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">✨ Signature Massage</h5>
+              <p class="card-text font-sm">A fusion of techniques focused on muscle repair, stress relief, and energy balance.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 90 mins | Price: ₹4000</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🧖 Swedish Massage</h5>
+              <p class="card-text font-sm">Gentle massage using long strokes to relax and improve circulation.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 45 mins | Price: ₹2500</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🧼 Body Scrub</h5>
+              <p class="card-text font-sm">Exfoliate your skin for a radiant glow and smoother feel.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 60 mins | Price: ₹3000</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">💆 Back Massage</h5>
+              <p class="card-text font-sm">Focused massage for tension in the upper, middle, and lower back.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 30 mins | Price: ₹1500</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🦶 Foot Reflexology</h5>
+              <p class="card-text font-sm">Pressure point massage for the feet that promotes healing and balance.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 30 mins | Price: ₹1200</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🧘‍♂️ Head Massage</h5>
+              <p class="card-text font-sm">Relieves tension and improves scalp circulation for relaxation.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 30 mins | Price: ₹1200</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">🧖‍♀️ Neck & Shoulder Massage</h5>
+              <p class="card-text font-sm">Targets tightness in the neck and shoulders to relieve stress and fatigue.</p>
+              <p class="text-muted small" style="font-weight: bold; color: black;">Duration: 30 mins | Price: ₹1200</p>
+            </div>
+          </div>
+        </div>
+  
       </div>
   
-      <div class="row mt-5">
-        <div class="col-lg-12 text-center">
-          <h3 class="h5 mb-3">Timings & Availability</h3>
+      <!-- Footer Info -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12">
+          <h3 class="h5 mb-3">📅 Spa Timings</h3>
           <p class="font-sm">Open Daily: <strong>8:00 AM – 8:00 PM</strong><br>
-            Prior appointments are recommended. Walk-ins subject to availability.</p>
+            Prior appointments recommended. Walk-ins subject to availability.</p>
+          <p class="font-sm mt-2">📞 Call us: <strong>8248284815</strong> / <strong>7401431111</strong></p>
+          <a href="contact.html" class="theme-btn btn-style mt-3"><span>Book Your Session</span></a>
         </div>
       </div>
     </div>
@@ -336,7 +472,7 @@
                     <div class="offcanvase__top">
                         <div class="offcanvase__logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo__two.svg" alt="logo">
+                                <img src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="logo">
                             </a>
                         </div>
                         <p class="description">
@@ -394,7 +530,7 @@
                                 </li>
 
                                 <li class="slide has__children">
-                                    <a class="slide__menu__item" href="resturant.html">Restaurants
+                                    <a class="slide__menu__item" href="resturant.html">Spicy Restaurants
                                     </a>
                                 </li>
                                 <li class="slide has__children">
@@ -450,7 +586,7 @@
             <div class="row">
                 <div class="footer__widget__wrapper">
                     <div class="rts__widget">
-                        <a href="index.html"><img class="footer__logo" src="assets/images/logo/logo.svg" alt="footer logo"></a>
+                        <a href="index.html"><img class="footer__logo" src="assets/newimages/final logo-01.jpg" style="width:129px;" alt="footer logo"></a>
                         <p class="font-sm max-290 mt-20">
                             SS Silver Oaks is your serene escape nestled in the lush hills of Yercaud where comfort, charm, and nature come together in harmony.
                         </p>
