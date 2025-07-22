@@ -50,6 +50,8 @@
         </div>
     </div>
     <style>
+     
+
  .main__header__wrapper {
     display: flex;
     align-items: center;
@@ -130,10 +132,13 @@
                                         </ul>
                                     </li>
                                     <li class="navigation__menu--item">
-                                        <a href="resturant.html" class="navigation__menu--item__link">Spicy Restaurant</a>
+                                        <a href="resturant.html" class="navigation__menu--item__link">Restaurant</a>
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="spa.html" class="navigation__menu--item__link">Spa</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="hall.html" class="navigation__menu--item__link">Hall</a>
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="blog.html" class="navigation__menu--item__link">Attractions</a>
@@ -149,7 +154,7 @@
 
                 <!-- Right Section -->
                 <div class="main__right">
-                    <a href="room-details-1.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
+                    <a href="index.html" class="theme-btn btn-style sm-btn fill"><span>Book Now</span></a>
 
                     <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="position: absolute; top: 0; right: 10px;">
                         <span><img src="assets/images/icon/menu-icon.svg" alt=""></span>
@@ -163,72 +168,134 @@
 
     <!-- header area end -->
 
-    <!-- banner area -->
-    <div class="rts__section banner__area is__home__one banner__height banner__center">
-        <div class="banner__slider overflow-hidden">
-            <div class="swiper-wrapper">
-                <!-- single slider item -->
-                <!-- single slider item start -->
+   <style>/* 1. Make video container responsive */
+    /* Ensure video fills background */
+
+    
+.banner__slider__image {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.banner__slider__image video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay container (banner content area) */
+/* Overlay container (Center the content over the video) */
+.banner__slide__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center horizontally and vertically */
+  width: 100%; /* Make it take full width */
+  height: 100%; /* Make it take full height */
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Content box (centered content) */
+.banner__slide__content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.banner__slide__content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.banner__slide__content .sub__text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.theme-btn.btn-style.fill.no-border {
+  background-color: #ab8a62;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+/* Booking section margin fix for scroll */
+#booking-section {
+  scroll-margin-top: 300px;
+  z-index: 5;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner__slide__content h2 {
+    font-size: 1.75rem;
+  }
+
+  .banner__slide__content .sub__text {
+    font-size: 1rem;
+  }
+
+  .theme-btn.btn-style.fill.no-border {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner__slide__content h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner__slide__content .sub__text {
+    font-size: 0.95rem;
+  }
+
+  .theme-btn.btn-style.fill.no-border {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+    </style>
+<!-- Swiper Slide -->
 <div class="swiper-slide">
-  <div class="banner__slider__image">
-    <img src="assets/images/banner/1.webp" alt="">
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="banner__slide__content">
-          <span class="h6 subtitle__icon">Welcome to SS Silver Oaks</span>
-          <h1>Experience Tranquility Amidst the Hills of Yercaud</h1>
-          <p class="sub__text">SS Silver Oaks offers a peaceful retreat with breathtaking views, luxurious stays, and a perfect blend of nature and comfort.</p>
-          <a href="room-two.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
+    <div class="banner__slider__image">
+      <video autoplay muted loop playsinline>
+        <source src="assets/newimages/WhatsApp Video 2025-07-21 at 12.06.21 PM.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+    <!-- Banner Content (Over video) -->
+    <div class="container banner__slide__overlay">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="banner__slide__content">
+            <span class="h6 subtitle__icon">Welcome to SS Silver Oaks</span>
+            <h2 style="color: #fff;">Experience Tranquility Amidst the Hills of Yercaud</h2>
+            <p class="sub__text">From eco-friendly cottages to scenic views, SS Silver Oaks provides a refreshing break from city life with personalized hospitality.</p>
+            <a href="room-one.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- single slider item end -->
 
-<!-- single slider item -->
-<div class="swiper-slide">
-  <div class="banner__slider__image">
-    <img src="assets/images/banner/2.webp" alt="">
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="banner__slide__content">
-          <span class="h6 subtitle__icon">Your Escape in Nature</span>
-          <h1>Unwind with Nature’s Calm and Modern Luxury</h1>
-          <p class="sub__text">From eco-friendly cottages to scenic views, SS Silver Oaks provides a refreshing break from city life with personalized hospitality.</p>
-          <a href="room-one.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- single slider item end -->
-
-<!-- single slider item -->
-<div class="swiper-slide">
-  <div class="banner__slider__image">
-    <img src="assets/images/banner/banner-3.webp" alt="">
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="banner__slide__content">
-          <span class="h6 subtitle__icon">Reimagine Your Stay</span>
-          <h1>Where Scenic Serenity Meets Elegant Living</h1>
-          <p class="sub__text">Indulge in a memorable hilltop getaway at SS Silver Oaks — perfect for families, couples, and solo travelers seeking peace and luxury.</p>
-          <a href="room-one.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- single slider item end -->
-
-                <!-- single slider item end -->
 
             </div>
             <div class="rts__slider__nav">
@@ -254,82 +321,133 @@
     </div>
     <!-- banner area end -->
 
+
+<style>#booking-section {
+    scroll-margin-top: 300px; /* adjust to match header height */
+  }
+  </style>
+
+
     <!-- advance search -->
-    <div class="rts__section advance__search__section is__home__one">
+    <div id="booking-section" class="rts__section advance__search__section is__home__one"> 
+        
         <div class="container">
-            <div class="row">
-                <form action="room-two.html" method="post" class="advance__search">
-                    <div class="advance__search__wrapper wow fadeInUp">
-                        <!-- single input -->
-                        <div class="query__input">
-                            <label for="check__in" class="query__label">Check In</label>
-                            <input type="text" id="check__in" name="check__in" placeholder="15 Jun 2024" required>
-                            <div class="query__input__icon">
-                                <i class="flaticon-calendar"></i>
-                            </div>
-                        </div>
-                        <!-- single input end -->
+          <div class="row">
+            <form id="bookingForm" action="booking_process.php" method="POST" class="advance__search">
+              <div class="advance__search__wrapper wow fadeInUp">
+      
+                <!-- Check In -->
+                <div class="query__input">
+                  <label for="check__in" class="query__label">Check In</label>
+                  <input type="text" id="check__in" name="check_in" placeholder="DD-MM-YY" required>
+                  <div class="query__input__icon"><i class="flaticon-calendar"></i></div>
+                </div>
+      
+                <!-- Check Out -->
+                <div class="query__input">
+                  <label for="check__out" class="query__label">Check Out</label>
+                  <input type="text" id="check__out" name="check_out" placeholder="DD-MM-YY" required>
+                  <div class="query__input__icon"><i class="flaticon-calendar"></i></div>
+                </div>
+      
+                <!-- Adults -->
+                <div class="query__input">
+                  <label for="adult" class="query__label">Adult</label>
+                  <select name="adult" id="adult" class="form-select">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Person</option>
+                    <option value="3">3 Person</option>
+                    <option value="4">4 Person</option>
+                    <option value="5">5 Person</option>
+                    <option value="6">6 Person</option>
+                    <option value="7">7 Person</option>
+                    <option value="8">8 Person</option>
+                    <option value="9">9 Person</option>
+                  </select>
+                  <div class="query__input__icon"><i class="flaticon-user"></i></div>
+                </div>
+      
+                <!-- Children -->
+                <div class="query__input">
+                  <label for="child" class="query__label">Child</label>
+                  <select name="child" id="child" class="form-select">
+                    <option value="0">0 Child</option>
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Child</option>
+                    <option value="3">3 Child</option>
+                    <option value="4">4 Child</option>
+                    <option value="5">5 Child</option>
+                    <option value="6">6 Child</option>
+                    <option value="7">7 Child</option>
+                    <option value="8">8 Child</option>
+                    <option value="9">9 Child</option>
+                  </select>
+                  <div class="query__input__icon"><i class="flaticon-user"></i></div>
+                </div>
+      
+                <!-- Room Category -->
+                <div class="query__input">
+                  <label for="room_cat" class="query__label">Room Category</label>
+                  <select id="room_cat" name="room_cat" class="form-select" required>
+                    <option value="">-- Select --</option>
+                    <option value="Executive">Executive</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Villa">Villa</option>
 
-                        <!-- single input -->
-                        <div class="query__input">
-                            <label for="check__out" class="query__label">Check Out</label>
-                            <input type="text" id="check__out" name="check__out" placeholder="15 May 2024" required>
-                            <div class="query__input__icon">
-                                <i class="flaticon-calendar"></i>
-                            </div>
-                        </div>
-                        <!-- single input end -->
-
-                        <!-- single input -->
-                        <div class="query__input">
-                            <label for="adult" class="query__label ">Adult</label>
-                            <select name="adult" id="adult" class="form-select">
-                                <option value="1">1 Person</option>
-                                <option value="2">2 Person</option>
-                                <option value="3">3 Person</option>
-                                <option value="4">4 Person</option>
-                                <option value="5">5 Person</option>
-                                <option value="6">6 Person</option>
-                                <option value="7">7 Person</option>
-                                <option value="8">8 Person</option>
-                                <option value="9">9 Person</option>
-                            </select>
-                            <div class="query__input__icon">
-                                <i class="flaticon-user"></i>
-                            </div>
-                        </div>
-                        <!-- single input end -->
-
-                        <!-- single input -->
-                        <div class="query__input">
-                            <label for="child" class="query__label ">Child</label>
-                            <select name="child" id="child" class="form-select">
-                                <option value="1">1 Child</option>
-                                <option value="2">2 Child</option>
-                                <option value="3">3 Child</option>
-                                <option value="4">4 Child</option>
-                                <option value="5">5 Child</option>
-                                <option value="6">6 Child</option>
-                                <option value="7">7 Child</option>
-                                <option value="8">8 Child</option>
-                                <option value="9">9 Child</option>
-                            </select>
-                            <div class="query__input__icon">
-                                <i class="flaticon-user"></i>
-                            </div>
-                        </div>
-                        <!-- single input end -->
-
-                        <!-- submit button -->
-                        <button class="theme-btn btn-style fill no-border search__btn">
-                            <span>Book Now</span>
-                        </button>
-                        <!-- submit button end -->
-                    </div>
-                </form>
-            </div>
+                  </select>
+                  <div class="query__input__icon"><i class="flaticon-home"></i></div>
+                </div>
+      
+                <!-- Room Availability Box -->
+                <style>
+                    #room-availability-box {
+                      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                      border-radius: 8px;
+                      border: 1px solid #dee2e6;
+                      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                      transition: all 0.3s ease;
+                      width: 100%;
+                      margin: 2rem auto; /* center the box */
+                      padding: 1.5rem;
+                    }
+                  
+                    #room-availability-box:hover {
+                      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+                    }
+                  
+                    #room-availability-box strong {
+                      font-size: 1.2rem;
+                      color: #343a40;
+                    }
+                  
+                    #availability-info {
+                      line-height: 1.7;
+                      font-size: 1rem;
+                      color: #495057;
+                    }
+                  </style>
+                  
+                  <!-- <div id="room-availability-box">
+                    <strong>Room Availability:</strong>
+                    <div id="availability-info" class="mt-3"></div>
+                  </div> -->
+                  
+      
+                <!-- Submit Button -->
+                <button class="theme-btn btn-style fill no-border search__btn">
+                  <span>Book Now</span>
+                </button>
+      
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
+      </div>
+    </div> <!-- end of #booking-section -->
+
+      
+      
 
     <!-- advance search end -->
 
@@ -344,10 +462,10 @@
                     <div class="image ">
                         <div class="position-relative  wow fadeInUp" data-wow-delay=".3s">
                             <div class="jara-mask-1 jarallax image-height">
-                                <img src="assets/images/about/about-1.webp" class="jarallax-img" alt="">
+                                <img src="assets/newimages/Untitledd-2.jpg" class="jarallax-img" alt="">
                             </div>
                         </div>
-                        <div class="image__card radius-10 wow fadeInUp" data-wow-delay=".5s">
+                        <!-- <div class="image__card radius-10 wow fadeInUp" data-wow-delay=".5s">
                             <div class="icon radius-10 center-item">
                                 <i class="flaticon-people"></i>
                             </div>
@@ -355,9 +473,9 @@
                                 <span class="h5">50+</span>
                                 <p>Experience Staff</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="image__card__image wow fadeInUp">
-                            <img src="assets/images/about/about-main.webp" width="312" height="230" alt="">
+                            <img src="assets/newimages/Artboarddd 7.jpg" width="312" height="230" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -366,7 +484,7 @@
                         <p class="content__subtitle wow fadeInUp" data-wow-delay=".3s">
                             Welcome to SS Silver Oaks Resorts,Restaurants and Spa, your serene hillside retreat nestled in the lush green landscapes of Yercaud. Located in the peaceful Berry Garden area, our 3-star resort offers a perfect blend of comfort, elegance, and natural beauty—making it an ideal getaway for families, couples, and nature lovers alike.</p>
                             <p class="content__subtitle wow fadeInUp" data-wow-delay=".3s">
-                                With 11 well-appointed rooms ranging from Standard to Deluxe options, each space is designed to give you a cozy, home-away-from-home experience. Wake up to the chirping of birds, relax on your private balcony, and soak in panoramic views of the Shevaroy Hills.
+                                With 17 well-appointed rooms ranging from Standard to Deluxe options, each space is designed to give you a cozy, home-away-from-home experience. Wake up to the chirping of birds, relax on your private balcony, and soak in panoramic views of the Shevaroy Hills.
                         </p>
                         <a href="#" class="theme-btn btn-style fill no-border wow fadeInUp" data-wow-delay=".5s">
                             <span>Learn More</span>
@@ -441,11 +559,13 @@
                     </div>
                 </div>                
             </div>
-            
+        </div> <!-- end of .container -->
+    </div> <!-- end of .rts__section -->
+    
     <!-- facilities end -->
 
     <!-- our room -->
-    <div class="rts__section pt-120">
+    <!-- <div class="rts__section pt-120">
         <div class="container">
             <div class="row">
                 <div class="section__wrapper mb-40 wow fadeInUp">
@@ -459,18 +579,16 @@
                 </div>
             </div>
         </div>
-        <!-- row end -->
         <div class="row">
             <div class="main__room__slider overflow-hidden wow fadeInUp" data-wow-delay=".5s">
                 <div class="swiper-wrapper">
-                    <!-- single room slider -->
                     <div class="swiper-slide">
                         <div class="room__slide__box radius-6">
                             <div class="room__thumbnail jara-mask-2 jarallax">
                                 <img height="585" width="420" class="radius-6 jarallax-img" src="assets/images/room/1.webp" alt="">
                             </div>
                             <div class="room__content">
-                                <a href="room-details-1.html" class="room__title">
+                                <a href="room-one.html" class="room__title">
                                     <h5>The Ritz-Carlton</h5>
                                 </a>
                                 <div class="room__content__meta">
@@ -481,16 +599,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- single room slider end -->
-
-                    <!-- single room slider -->
+                    
                     <div class="swiper-slide">
                         <div class="room__slide__box radius-6">
                             <div class="room__thumbnail jara-mask-2 jarallax">
                                 <img height="585" width="420" class="radius-6 jarallax-img" src="assets/images/room/2.webp" alt="">
                             </div>
                             <div class="room__content">
-                                <a href="room-details-1.html" class="room__title">
+                                <a href="room-one.html" class="room__title">
                                     <h5>Four Seasons Hotels</h5>
                                 </a>
                                 <div class="room__content__meta">
@@ -501,16 +617,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- single room slider end -->
-
-                    <!-- single room slider -->
+                
                     <div class="swiper-slide">
                         <div class="room__slide__box radius-6">
                             <div class="room__thumbnail jara-mask-2 jarallax">
                                 <img height="585" width="420" class="radius-6 jarallax-img" src="assets/images/room/3.webp" alt="">
                             </div>
                             <div class="room__content">
-                                <a href="room-details-1.html" class="room__title">
+                                <a href="room-one.html" class="room__title">
                                     <h5>Waldorf Astoria Hotels</h5>
                                 </a>
                                 <div class="room__content__meta">
@@ -521,16 +635,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- single room slider end -->
-
-                    <!-- single room slider -->
+           
                     <div class="swiper-slide">
                         <div class="room__slide__box radius-6">
                             <div class="room__thumbnail jara-mask-2 jarallax">
                                 <img height="585" width="420" class="radius-6 jarallax-img" src="assets/images/room/4.webp" alt="">
                             </div>
                             <div class="room__content">
-                                <a href="room-details-1.html" class="room__title">
+                                <a href="room-one.html" class="room__title">
                                     <h5>Waldorf Astoria Hotels</h5>
                                 </a>
                                 <div class="room__content__meta">
@@ -541,16 +653,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- single room slider end -->
-
-                    <!-- single room slider -->
+                    
                     <div class="swiper-slide">
                         <div class="room__slide__box radius-6">
                             <div class="room__thumbnail jara-mask-2 jarallax">
                                 <img height="585" width="420" class="radius-6 jarallax-img" src="assets/images/room/1.webp" alt="">
                             </div>
                             <div class="room__content">
-                                <a href="room-details-1.html" class="room__title">
+                                <a href="room-one.html" class="room__title">
                                     <h5>Waldorf Astoria Hotels</h5>
                                 </a>
                                 <div class="room__content__meta">
@@ -561,264 +671,561 @@
                             </div>
                         </div>
                     </div>
-                    <!-- single room slider end -->
                 </div>
             </div>
 
-            <!-- pagination button -->
             <div class="rts__pagination">
                 <div class="rts-pagination"></div>
             </div>
-            <!-- pagination button end -->
         </div>
-    </div>
+    </div> -->
     <!-- our room end -->
+
 <br>
 <br>
 <br>
 
-    <div class="section__content__left">
-        <span class="h6 subtitle__icon__two d-block wow fadeInUp">Hear from Our Visitors</span>
-        <h2 class="content__title h2 lh-1">Guest reviews & ratings</h2>
+
+
+
+    <div class="row mb-5 text-center">
+        <div class="col-lg-12">
+          <span class="h6 subtitle__icon__two d-block wow fadeInUp">Discover Your Stay</span>
+          <h3 class="content__title h3 lh-1 wow fadeInUp">Our Room Categories at SS Silver Oaks</h3>
+        </div>
     </div>
+      
+      
+
+    <!-- advance search end -->
+
+    <!-- single rooms -->
+
+    
+    <div class="rts__section pb-120">
+        <div class="container">
+            <div class="row g-30">
+                <!-- single room -->
+
+
+                <div class="col-xl-6 col-lg-6 col-md-6"> 
+                    <div class="room__card">
+                        <div class="room__card__top">
+                            <div class="room__card__image">
+                                <div id="roomCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="assets/newimages/Artboarddd 1.jpg" class="d-block w-100" alt="Room Image 1" width="420" height="310">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 7.jpg" class="d-block w-100" alt="Room Image 5" width="420" height="310">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 2.jpg" class="d-block w-100" alt="Room Image 2" width="420" height="310">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 3.jpg" class="d-block w-100" alt="Room Image 3" width="420" height="310">
+                                        </div> -->
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 4.jpg" class="d-block w-100" alt="Room Image 4" width="420" height="310">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 5.jpg" class="d-block w-100" alt="Room Image 5" width="420" height="310">
+                                        </div> -->
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 6.jpg" class="d-block w-100" alt="Room Image 5" width="420" height="310">
+                                        </div>
+
+                                    </div>
+                            
+                                    <!-- Carousel Controls -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="room__price__tag">
+                                <span class="h6 d-block">₹18,000</span>
+                            </div>
+                        </div>
+                        <div class="room__card__meta">
+                            <a href="room-one.html" class="room__card__title h5">Premium Villa (3 BHK)</a>
+                            <div class="room__card__meta__info">
+                             
+                            </div>
+                            <p class="font-sm">Our rooms offer a blend of comfort and elegance, designed to provide an exceptional stay for every guest.</p>
+                            
+                            <!-- Tariff Info Start -->
+                            <div class="villa-tariff mt-3 p-3 rounded" style="background-color:#fff; border:1px solid #ddd; margin-left: -10px;">
+                                <h6 style="font-weight: bold; color: #ab8a62;">Tariff Details</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>Weekdays (Mon – Thu):</strong> ₹18,000</li>
+                                    <li><strong>Weekends (Fri – Sun):</strong> ₹22,000</li>
+                                    <li><strong>Holidays (Govt/Local):</strong> ₹26,000</li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <!-- Tariff Info End -->
+                            <a href="index.html#booking-section" style="
+                            display: inline-block;
+                            background-color: #ab8a62;
+                            color: #ffffff;
+                            padding: 12px 24px;
+                            border-radius: 5px;
+                            text-decoration: none;
+                            font-weight: bold;
+                          ">
+                            Book Now
+                          </a>
+                          
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xl-6 col-lg-6 col-md-6"> 
+                    <div class="room__card">
+                        <div class="room__card__top">
+                            <div class="room__card__image">
+                                <div id="roomCarousel4" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="assets/newimages/Artboarddd 3.jpg" class="d-block w-100" alt="Room Image 1" width="420" height="310">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/Artboarddd 5.jpg" class="d-block w-100" alt="Room Image 5" width="420" height="310">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/newimages/sssilveroaks/Artboard 15.jpg" class="d-block w-100" alt="Room Image 2" width="420" height="310">
+                                        </div>
+                                    </div>
+                
+                                    <!-- Carousel Controls -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel4" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel4" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                
+                            <div class="room__price__tag">
+                                <span class="h6 d-block">₹3,000</span>
+                            </div>
+                        </div>
+                
+                        <div class="room__card__meta">
+                            <a href="room-one.html" class="room__card__title h5">Executive Room</a>
+                            <div class="room__card__meta__info"></div>
+                            <p class="font-sm">Spacious and thoughtfully designed, our Executive Rooms are perfect for business or leisure, offering privacy and style.</p>
+                            
+                            <!-- Tariff Info -->
+                            <div class="villa-tariff mt-3 p-3 rounded" style="background-color:#fff; border:1px solid #ddd; margin-left: -10px;">
+                                <h6 style="font-weight: bold; color: #ab8a62;">Tariff Details</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>Weekdays (Mon – Thu):</strong> ₹3,000</li>
+                                    <li><strong>Weekends (Fri – Sun):</strong> ₹3,500</li>
+                                    <li><strong>Holidays (Govt/Local):</strong> ₹4,000</li>
+                                </ul>
+                            </div>
+                            <br>
+                
+                            <a href="index.html#booking-section" style="
+                                display: inline-block;
+                                background-color: #ab8a62;
+                                color: #ffffff;
+                                padding: 12px 24px;
+                                border-radius: 5px;
+                                text-decoration: none;
+                                font-weight: bold;
+                            ">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+
+               <!-- DELUXE ROOM -->
+<div class="col-xl-6 col-lg-6 col-md-6"> 
+    <div class="room__card">
+        <div class="room__card__top">
+            <div class="room__card__image">
+                <div id="roomCarousel6" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/newimages/New folder (2)/Artboard 13.jpg" class="d-block w-100" alt="Executive Room Image 1" width="420" height="310">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/newimages/New folder (2)/Artboard 11.jpg" class="d-block w-100" alt="Executive Room Image 2" width="420" height="310">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/newimages/sssilveroaks/Artboard 7.jpg" class="d-block w-100" alt="Executive Room Image 3" width="420" height="310">
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel6" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel6" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="room__price__tag">
+                <span class="h6 d-block">₹3,800</span>
+            </div>
+        </div>
+        <div class="room__card__meta">
+            <a href="room-one.html" class="room__card__title h5">Deluxe Room</a>
+            <div class="room__card__meta__info"></div>
+            <p class="font-sm">Our Deluxe Rooms offer a serene retreat with tasteful interiors and modern amenities for a relaxed stay at Silver Oaks.</p>
+            
+            <!-- Tariff Info -->
+            <div class="villa-tariff mt-3 p-3 rounded" style="background-color:#fff; border:1px solid #ddd;margin-left: -10px;">
+                <h6 style="font-weight: bold; color: #ab8a62;">Tariff Details</h6>
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Weekdays (Mon – Thu):</strong> ₹3,800</li>
+                    <li><strong>Weekends (Fri – Sun):</strong> ₹4,300</li>
+                    <li><strong>Holidays (Govt/Local):</strong> ₹4,800</li>
+                </ul>
+            </div>
+            <br>
+            <a href="index.html#booking-section" style="
+                display: inline-block;
+                background-color: #ab8a62;
+                color: #ffffff;
+                padding: 12px 24px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            ">
+                Book Now
+            </a>
+        </div>
+    </div>
+</div>
+
+
+                
+
+
+              <!-- PREMIUM ROOM -->
+<div class="col-xl-6 col-lg-6 col-md-6"> 
+    <div class="room__card">
+        <div class="room__card__top">
+            <div class="room__card__image">
+                <div id="roomCarousel8" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/newimages/sssilveroaks/Artboard 2.jpg" class="d-block w-100" alt="Executive Room Image 1" width="420" height="310">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/newimages/sssilveroaks/Artboard 4.jpg" class="d-block w-100" alt="Executive Room Image 2" width="420" height="310">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/newimages/sssilveroaks/Artboard 3.jpg" class="d-block w-100" alt="Executive Room Image 3" width="420" height="310">
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel8" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel8" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="room__price__tag">
+                <span class="h6 d-block">₹4,300</span>
+            </div>
+        </div>
+        <div class="room__card__meta">
+            <a href="room-one.html" class="room__card__title h5">Premium Room</a>
+            <div class="room__card__meta__info"></div>
+            <p class="font-sm">Our rooms offer a blend of comfort and elegance, perfect for couples or solo travelers looking for peace and style.</p>
+            
+            <!-- Tariff Info -->
+            <div class="villa-tariff mt-3 p-3 rounded" style="background-color:#fff; border:1px solid #ddd;margin-left: -10px;">
+                <h6 style="font-weight: bold; color: #ab8a62;">Tariff Details</h6>
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Weekdays (Mon – Thu):</strong> ₹4,300</li>
+                    <li><strong>Weekends (Fri – Sun):</strong> ₹4,800</li>
+                    <li><strong>Holidays (Govt/Local):</strong> ₹5,800</li>
+                </ul>
+            </div>
+            <br>
+            <a href="index.html#booking-section" style="
+                display: inline-block;
+                background-color: #ab8a62;
+                color: #ffffff;
+                padding: 12px 24px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            ">
+                Book Now
+            </a>                        </div>
+                    </div>
+                </div>
+            </div> <!-- end of .row -->
+        </div> <!-- end of .container -->
+      </div> <!-- end of .rts__section -->
+      
+              
+           
+
+      <div class="section__content__left text-center mx-auto">
+        <span class="h6 subtitle__icon__two d-block wow fadeInUp d-inline-flex justify-content-center align-items-center">Hear from Our Visitors</span>
+        <h2 class="content__title h2 lh-1">Guest reviews & ratings</h2>
+        
+    </div>
+    
     <br>
     
     <script defer async src='https://cdn.trustindex.io/loader.js?6eb911d5089814000a96adb0890'></script>
 
-
-    <!-- client testimonial  -->
-    <div class="rts__section section__padding testimonial has__shape">
-        <div class="container">
-            <div class="row mb-40">
-                <div class="d-flex align-items-center justify-content-between position-relative">
-                    <div class="section__content__left">
-                        <span class="h6 subtitle__icon__two d-block wow fadeInUp">Testimonial</span>
-                        <h2 class="content__title h2 lh-1">What Our Guests Say</h2>
-                    </div>
-                    <div class="slider__navigation">
-                        <div class="nav__btn button-next">
-                            <img src="assets/images/icon/arrow-left-short.svg" alt="">
-                        </div>
-                        <div class="nav__btn button-prev">
-                            <img src="assets/images/icon/arrow-right-short.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-11">
-                    <div class="testimonial__slider overflow-hidden">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial__item__content">
-                                    <div class="author__icon">
-                                        <img src="assets/images/author/author-2x.webp" alt="">
-                                    </div>
-                                    <div class="testimonial__content">
-                                        <div class="single__slider__item">
-                                            <div class="slider__rating mb-20">
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star-sharp-half-stroke"></i>
-                                            </div>
-                                            <span class="slider__text d-block">We had a peaceful stay at SS Silver Oaks. The rooms were clean, staff was helpful, and the bonfire night was such a highlight! Perfect place to relax in Yercaud.</span>
-                                            <div class="slider__author__info">
-                                                <div class="slider__author__info__content">
-                                                    <h6 class="mb-0">Ramesh K.</h6>
-                                                    <span>Guest from Chennai</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial__item__content">
-                                    <div class="author__icon">
-                                        <img src="assets/images/author/author-4.webp" alt="">
-                                    </div>
-                                    <div class="testimonial__content">
-                                        <div class="single__slider__item">
-                                            <div class="slider__rating mb-20">
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                            </div>
-                                            <span class="slider__text d-block">A hidden gem in Yercaud! The view from our room was lovely, and the food was delicious. Our kids enjoyed the indoor games while we relaxed by the garden.</span>
-                                            <div class="slider__author__info">
-                                                <div class="slider__author__info__content">
-                                                    <h6 class="mb-0">Priya Menon</h6>
-                                                    <span>Family Traveler</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- You can add more testimonial slides similarly -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- client testimonial  end -->
-
-
-
-
-
-    <!-- video section start -->
-    <div class="rts__section pb-120 video video__full">
-        <div class="container-full">
-            <div class="row">
-                <div class="col-12">
-                    <div class="video__area position-relative wow fadeInUp">
-                        <div class="video__area__image jara-mask-2 jarallax rounded-0">
-                            <img class="radius-none jarallax-img" src="assets/images/video/video-main.webp" alt="">
-                        </div>
-                        <div class="video--spinner__wrapper ">
-                            <div class="rts__circle">
-                                <svg class="spinner" viewBox="0 0 100 100">
-                                    <defs>
-                                        <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
-                                    </defs>
-                                    <text>
-                                        <textPath xlink:href="#circle-2">Watch Now * Watch Now * Watch Full Video *</textPath>
-                                    </text>
-                                </svg>
-                                <div class="rts__circle--icon">
-                                    <a href="https://www.youtube.com/watch?v=qOwxqRGHy5Q" class="video-play">
-                                        <i class="flaticon-play"></i>
-
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- video section end -->
+<br>
+<br>
+<br>
+   
 
 
  <!-- special section start -->
  <div class="rts__section offer__area is__home__one has__shape">
     <div class="section__shape">
-        <img src="assets/images/offer/section__bg.svg" alt="">
+        <img src="assets/images/offer/section__bg.svg"   alt="">
     </div>
     <div class="container">
         <div class="row">
-            <div class="section__wrapper mb-40 wow fadeInUp" data-wow-delay=".3s">
-                <div class="section__content__left">
-                    <span class="h6 subtitle__icon__two d-block wow fadeInUp">Special Offer</span>
-                    <h2 class="content__title h2 lh-1">Special Offer</h2>
+            <div class="section__content__center">
+
+            <div class="row position-relative justify-content-center text-center mb-30">
+                <div class="section__content__left d-inline-block">
+                    
+                <span class="h6 subtitle__icon__two d-block wow fadeInUp d-inline-flex justify-content-center align-items-center">Our Special Services</span>
+                <h2 class="content__title h2 lh-1">Our Special Services</h2>
+              </div>
+            </div>
+          </div>
+          
+        <!-- row end -->
+
+        <div class="container my-5">
+            <div class="row justify-content-center g-4">
+          
+              <!-- Spa Card -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card shadow rounded-4">
+                  <div id="spaSliderSmall" class="carousel slide rounded-top-4" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-top-4">
+                      <div class="carousel-item active">
+                        <img src="assets/newimages/SPAHOME1.jpg" class="d-block w-100" alt="Spa 1" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/SPAHOME2.jpg" class="d-block w-100" alt="Spa 2" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/SPAHOME3.jpg" class="d-block w-100" alt="Spa 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/SPAHOME4.jpg" class="d-block w-100" alt="Spa 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#spaSliderSmall" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#spaSliderSmall" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
+                    </button>
+                  </div>
+                  <div class="card-body bg-light">
+                    <h5 class="card-title mb-2">Silver Serenity Spa</h5>
+                    <p class="card-text small mb-2">
+                      Unwind in our serene spa offering traditional therapies, hot stone massages, and rejuvenating treatments amidst nature’s calm.
+                    </p>
+                    <p class="card-text small">
+                      💆‍♀️ <strong>Ayurvedic Massage</strong><br>
+                      🌿 <strong>Herbal Steam Therapy</strong><br>
+                      🧘 <strong>Couple Spa Packages</strong>
+                    </p>
+                    <a href="spa.html" class="btn btn-sm btn-outline-primary">Know More</a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Restaurant Card -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card shadow rounded-4">
+                  <div id="restaurantSliderSmall" class="carousel slide rounded-top-4" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-top-4">
+                      <div class="carousel-item active">
+                        <img src="assets/newimages/RESHOME1.jpg" class="d-block w-100" alt="Restaurant 1" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME9.jpg" class="d-block w-100" alt="Restaurant 2" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME6.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME7.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME4.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME5.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME2.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME3.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/RESHOME8.jpg" class="d-block w-100" alt="Restaurant 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#restaurantSliderSmall" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#restaurantSliderSmall" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
+                    </button>
+                  </div>
+                  <div class="card-body bg-light">
+                    <h5 class="card-title mb-2">Spicy Restaurant</h5>
+                    <p class="card-text small mb-2">
+                      Taste the bold flavors of India in our vibrant Spicy Restaurant. From fiery curries to sizzling tandoori dishes, every bite is an explosion of flavor!
+                    </p>
+                    <p class="card-text small">
+                      🥘 <strong>Authentic Indian Curries</strong><br>
+                      🍗 <strong>Tandoori Specialties</strong><br>
+                      🍛 <strong>Fresh Breads & Sweets</strong>
+                    </p>
+                    <a href="resturant.html" class="btn btn-sm btn-outline-primary">Know More</a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- 250 Pax Meeting Hall Card -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card shadow rounded-4">
+                  <div id="hallSliderSmall" class="carousel slide rounded-top-4" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-top-4">
+                      <div class="carousel-item active">
+                        <img src="assets/newimages/HALLHOME1.jpg" class="d-block w-100" alt="Meeting Hall 1" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/HALLHOME2.jpg" class="d-block w-100" alt="Meeting Hall 2" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/HALLHOME3.jpg" class="d-block w-100" alt="Meeting Hall 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/newimages/HALLHOME4.jpg" class="d-block w-100" alt="Meeting Hall 3" style="height: 330px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hallSliderSmall" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hallSliderSmall" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
+                    </button>
+                  </div>
+                  <div class="card-body bg-light">
+                    <h5 class="card-title mb-2">Meeting Hall</h5>
+                    <p class="card-text small mb-2">
+                      Host your grand events in our spacious and fully-equipped 250-seater meeting hall. Perfect for conferences, weddings, and celebrations.
+                    </p>
+                    <p class="card-text small">
+                      🎤 <strong>Audio-Visual Setup</strong><br>
+                      🪑 <strong>Banquet & Theater Seating</strong><br>
+                      🎉 <strong>Ideal for Corporate & Social Events</strong>
+                    </p>
+                    <a href="hall.html" class="btn btn-sm btn-outline-primary">Know More</a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div> <!-- Close section__content__left -->
+    </div> <!-- Close section__content__center -->
+</div> <!-- Close rts__section offer__area -->
+    
+  
+          
+
+
+
+
+
+
+
+
+<div class="rts__section pb-120 video video__full">
+    <div class="container-full">
+        <div class="row justify-content-center text-center mb-40">
+            <div class="col-lg-8 wow fadeInUp" data-wow-delay=".3s">
+                <div class="section__topbar">
+                    <span class="h6 subtitle__icon__three mx-auto">Our Video</span>
+                    <h2 class="section__title">SS Silver Oaks Overview</h2>
                 </div>
             </div>
         </div>
-        <!-- row end -->
-
-        <div class="row row-60">
-            <!-- single offer item -->
-            <div class="col-xl-6 col-lg-10 wow fadeInUp" data-wow-delay=".3s">
-                <div class="single__offer">
-                    <div class="single__offer__image">
-                        <img src="assets/images/offer/1.webp" width="310" height="310" alt="">
+        <div class="row">
+            <div class="col-12">
+                <div class="video__area position-relative wow fadeInUp">
+                    <div class="video__area__image jara-mask-2 jarallax rounded-0">
+                        <img class="radius-none jarallax-img" src="assets/images/video/video-main.webp" alt="">
                     </div>
-                    <div class="single__offer__content">
-                        <a href="#">
-                            <h6>Family Fun Package</h6>
-                        </a>
-                        <ul class="offer__included">
-                            <li><i class="flaticon-check-circle"></i> 15% off on family suites</li>
-                            <li><i class="flaticon-check-circle"></i> Free meals for kids under 12</li>
-                            <li><i class="flaticon-check-circle"></i> Complimentary tickets</li>
-                            <li><i class="flaticon-check-circle"></i> The local amusement park</li>
-                            <li><i class="flaticon-check-circle"></i> Daily family-friendly activities</li>
-                        </ul>
-                        <a href="#" class="underline__style">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- single offer item end -->
-
-            <!-- single offer item -->
-            <div class="col-xl-6 col-lg-10 wow fadeInUp" data-wow-delay=".4s">
-                <div class="single__offer">
-                    <div class="single__offer__image">
-                        <img src="assets/images/offer/2.webp" width="310" height="310" alt="">
-                    </div>
-                    <div class="single__offer__content">
-                        <a href="#">
-                            <h6>Spa Retreat</h6>
-                        </a>
-                        <ul class="offer__included">
-                            <li><i class="flaticon-check-circle"></i> A two-night stay in a premium room</li>
-                            <li><i class="flaticon-check-circle"></i> Daily spa treatments</li>
-                            <li><i class="flaticon-check-circle"></i> Healthy breakfast and lunch options</li>
-                            <li><i class="flaticon-check-circle"></i> Access to all spa facilities</li>
-                            <li><i class="flaticon-check-circle"></i> 25% off for stays of 7 nights or more</li>
-                        </ul>
-                        <a href="#" class="underline__style">Book Now</a>
+                    <div class="video--spinner__wrapper ">
+                        <div class="rts__circle">
+                            <svg class="spinner" viewBox="0 0 100 100">
+                                <defs>
+                                    <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
+                                </defs>
+                                <text>
+                                    <textPath xlink:href="#circle-2">Watch Now * Watch Now * Watch Full Video *</textPath>
+                                </text>
+                            </svg>
+                            <div class="rts__circle--icon">
+                                <a href="https://www.youtube.com/watch?v=XLmVZN4kki4" class="video-play" target="_blank" rel="noopener">
+                                    <i class="flaticon-play"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- single offer item end -->
-
-            <!-- single offer item -->
-            <div class="col-xl-6 col-lg-10 wow fadeInUp" data-wow-delay=".5s">
-                <div class="single__offer">
-                    <div class="single__offer__image">
-                        <img src="assets/images/offer/3.webp" width="310" height="310" alt="">
-                    </div>
-                    <div class="single__offer__content">
-                        <a href="#">
-                            <h6>Business Traveler Special</h6>
-                        </a>
-                        <ul class="offer__included">
-                            <li><i class="flaticon-check-circle"></i> 10% off on executive rooms</li>
-                            <li><i class="flaticon-check-circle"></i> Complimentary high-speed Wi-Fi</li>
-                            <li><i class="flaticon-check-circle"></i> Access to the business lounge</li>
-                            <li><i class="flaticon-check-circle"></i> Free airport shuttle service</li>
-                            <li><i class="flaticon-check-circle"></i> Daily family-friendly activities</li>
-                        </ul>
-                        <a href="#" class="underline__style">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- single offer item end -->
-
-            <!-- single offer item -->
-            <div class="col-xl-6 col-lg-10 wow fadeInUp" data-wow-delay=".6s">
-                <div class="single__offer">
-                    <div class="single__offer__image">
-                        <img src="assets/images/offer/4.webp" width="310" height="310" alt="">
-                    </div>
-                    <div class="single__offer__content">
-                        <a href="#">
-                            <h6>Romantic Getaway</h6>
-                        </a>
-                        <ul class="offer__included">
-                            <li><i class="flaticon-check-circle"></i> A two-night stay in a deluxe suite</li>
-                            <li><i class="flaticon-check-circle"></i> A bottle of champagne and chocolates</li>
-                            <li><i class="flaticon-check-circle"></i> Romantic dinner for two</li>
-                            <li><i class="flaticon-check-circle"></i> Couples massage at our spa</li>
-                            <li><i class="flaticon-check-circle"></i> Couples massage at our spa</li>
-                        </ul>
-                        <a href="#" class="underline__style">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- single offer item end -->
         </div>
     </div>
 </div>
+
 <!-- special section end -->
 
 <!-- gallery -->
@@ -838,8 +1245,8 @@
                     <!-- single gallery image -->
                     <div class="swiper-slide">
                         <div class="gallery__item">
-                            <a href="assets/images/index-3/gallery/1.webp">
-                                <img src="assets/images/index-3/gallery/1.webp" alt="">
+                            <a href="assets/newimages/New folder (2)/Artboard 12.jpg" style="height: 330px; object-fit: cover;">
+                                <img src="assets/newimages/New folder (2)/Artboard 12.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -848,8 +1255,8 @@
                     <!-- single gallery image -->
                     <div class="swiper-slide">
                         <div class="gallery__item">
-                            <a href="assets/images/index-3/gallery/2.webp">
-                                <img src="assets/images/index-3/gallery/2.webp" alt="">
+                            <a href="assets/newimages/New folder (2)/Artboard 18.jpg">
+                                <img src="assets/newimages/New folder (2)/Artboard 18.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -858,28 +1265,40 @@
                     <!-- single gallery image -->
                     <div class="swiper-slide">
                         <div class="gallery__item">
-                            <a href="assets/images/index-3/gallery/3.webp">
-                                <img src="assets/images/index-3/gallery/3.webp" alt="">
+                            <a href="assets/newimages/HALLHOME1.jpg">
+                                <img src="assets/newimages/HALLHOME1.jpg" alt="">
                             </a>
                         </div>
                     </div>
                     <!-- single gallery image end -->
-
+                    <div class="swiper-slide">
+                        <div class="gallery__item">
+                            <a href="assets/newimages/RESHOME1.jpg">
+                                <img src="assets/newimages/RESHOME1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
                     <!-- single gallery image -->
                     <div class="swiper-slide">
                         <div class="gallery__item">
-                            <a href="assets/images/index-3/gallery/4.webp">
-                                <img src="assets/images/index-3/gallery/4.webp" alt="">
+                            <a href="assets/newimages/New folder (2)/Artboard 19.jpg">
+                                <img src="assets/newimages/New folder (2)/Artboard 19.jpg" alt="">
                             </a>
                         </div>
                     </div>
                     <!-- single gallery image end -->
-
+                    <div class="swiper-slide">
+                        <div class="gallery__item">
+                            <a href="assets/newimages/RESHOME9.jpg">
+                                <img src="assets/newimages/RESHOME9.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
                     <!-- single gallery image -->
                     <div class="swiper-slide">
                         <div class="gallery__item">
-                            <a href="assets/images/index-3/gallery/1.webp">
-                                <img src="assets/images/index-3/gallery/5.webp" alt="">
+                            <a href="assets/newimages/RESHOME5.jpg">
+                                <img src="assets/newimages/RESHOME5.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -1081,6 +1500,7 @@
                     </div>
                 </div>
                 <div class="right__side desktop__menu">
+                    
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     <div class="rts__desktop__menu">
                         <nav class="desktop__menu offcanvas__menu">
@@ -1089,10 +1509,7 @@
                                     <a class="slide__menu__item" href="index.html">Home
                                     </a>
                                 </li>
-                                <li class="slide">
-                                    <a class="slide__menu__item" href="about.html">About us
-                                    </a>
-                                </li>
+                               
                                 <li class="slide has__children">
                                     <a class="slide__menu__item" href="#">Rooms
                                         <span class="toggle"></span>
@@ -1101,20 +1518,6 @@
                                         <li><a href="room-one.html">Room Category</a></li>
                                         <!-- <li><a href="room-details-1.html">Room Details One</a></li> -->
                                     </ul>
-                                </li>
-
-                                <li class="slide has__children">
-                                    <a class="slide__menu__item" href="blog.html">Attractions
-                                    </a>
-                                </li>
-
-                                <li class="slide has__children">
-                                    <a class="slide__menu__item" href="resturant.html">Spicy Restaurants
-                                    </a>
-                                </li>
-                                <li class="slide has__children">
-                                    <a class="slide__menu__item" href="spa.html">Spa
-                                    </a>
                                 </li>
                                 <li class="slide has__children">
                                     <a class="slide__menu__item" href="#">Explore
@@ -1126,6 +1529,25 @@
                                         <li><a href="service.html">Service</a></li>
                                     </ul>
                                 </li>
+                                
+                                <li class="slide has__children">
+                                    <a class="slide__menu__item" href="resturant.html">Spicy Restaurants
+                                    </a>
+                                </li>
+                                <li class="slide has__children">
+                                    <a class="slide__menu__item" href="spa.html">Spa
+                                    </a>
+                                </li>
+                                <li class="slide has__children">
+                                    <a class="slide__menu__item" href="hall.html">Hall
+                                    </a>
+                                </li>
+                              
+                                <li class="slide has__children">
+                                    <a class="slide__menu__item" href="blog.html">Attractions
+                                    </a>
+                                </li>
+
                                 <li class="slide has__children">
                                     <a class="slide__menu__item" href="contact.html">Contact Us
                                     </a>
@@ -1238,6 +1660,148 @@
     </div>
     <!-- THEME PRELOADER END -->
 
+    <!-- Contact Form Popup -->
+<!-- Contact Popup Form -->
+<div id="contactPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+background:#fff; padding:30px; box-shadow:0 0 20px rgba(0,0,0,0.2); z-index:9999; border-radius:10px; width:90%; max-width:500px;">
+  <h3 style="text-align:center; margin-bottom:20px;">Guest Contact Details</h3>
+  <form id="contactForm" method="POST" action="booking_process.php">
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="check_in" id="popup_check_in">
+    <input type="hidden" name="check_out" id="popup_check_out">
+    <input type="hidden" name="adult" id="popup_adult">
+    <input type="hidden" name="child" id="popup_child">
+    <input type="hidden" name="room_cat" id="popup_room_cat">
+
+    <!-- Name -->
+    <div style="margin-bottom:15px;">
+      <label>Name</label>
+      <input type="text" name="name" required class="form-control" placeholder="Your Name" />
+    </div>
+
+    <!-- Phone -->
+    <div style="margin-bottom:15px;">
+      <label>Phone</label>
+      <input type="text" name="phone" required class="form-control" placeholder="Phone Number" />
+    </div>
+
+    <!-- Location -->
+    <div style="margin-bottom:15px;">
+      <label>Location</label>
+      <input type="text" name="location" required class="form-control" placeholder="Your City or Area" />
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button type="submit" class="theme-btn btn-style" style="color: black;">Submit Booking</button>
+      <button type="button" onclick="closePopup()" style="margin-left:10px;">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<!-- Message Modal -->
+<!-- Contact Popup Form -->
+<div id="contactPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+background:#fff; padding:30px; box-shadow:0 0 20px rgba(0,0,0,0.2); z-index:9999; border-radius:10px; width:90%; max-width:500px;">
+  <h3 style="text-align:center; margin-bottom:20px;">Guest Contact Details</h3>
+  <form id="contactForm" method="POST" action="booking_process.php">
+
+    <!-- Hidden fields (carried from previous form) -->
+    <input type="hidden" name="check_in" id="popup_check_in">
+    <input type="hidden" name="check_out" id="popup_check_out">
+    <input type="hidden" name="adult" id="popup_adult">
+    <input type="hidden" name="child" id="popup_child">
+    <input type="hidden" name="room_cat" id="popup_room_cat">
+
+    <!-- Name -->
+    <div style="margin-bottom:15px;">
+      <label>Name</label>
+      <input type="text" name="name" required class="form-control" placeholder="Your Name" />
+    </div>
+
+    <!-- Phone -->
+    <div style="margin-bottom:15px;">
+      <label>Phone</label>
+      <input type="text" name="phone" required class="form-control" placeholder="Phone Number" />
+    </div>
+
+    <!-- Location -->
+    <div style="margin-bottom:15px;">
+      <label>Location</label>
+      <input type="text" name="location" required class="form-control" placeholder="Your City or Area" />
+    </div>
+
+    <!-- Submit + Cancel Buttons -->
+    <div style="text-align:center; margin-top:20px;">
+      <button type="submit" class="theme-btn btn-style" style="color: black;">Submit Booking</button>
+      <button type="button" onclick="closePopup()" style="margin-left:10px;">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<!-- Message Modal -->
+<div id="bookingFullMsg" style="display:none; position:fixed; top:40%; left:50%; transform:translate(-50%,-50%);
+background:#fff; padding:20px 30px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:9999;">
+  <p style="margin:0;">⚠️ Sorry, booking for this room category is filled.</p>
+  <div style="text-align:center; margin-top:10px;">
+    <button onclick="document.getElementById('bookingFullMsg').style.display='none';">Okay</button>
+  </div>
+</div>
+
+<!-- Booking Form Logic -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const roomCat = document.getElementById("room_cat").value;
+
+  // Send AJAX request to check availability
+  fetch("check_availability.php?room_cat=" + encodeURIComponent(roomCat))
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status === "available") {
+        // Copy data into popup form
+        document.getElementById("popup_check_in").value = document.getElementById("check__in").value;
+        document.getElementById("popup_check_out").value = document.getElementById("check__out").value;
+        document.getElementById("popup_adult").value = document.getElementById("adult").value;
+        document.getElementById("popup_child").value = document.getElementById("child").value;
+        document.getElementById("popup_room_cat").value = roomCat;
+
+        // Show contact popup
+        document.getElementById("contactPopup").style.display = "block";
+      } else {
+        // Show booking full message
+        document.getElementById("bookingFullMsg").style.display = "block";
+      }
+    })
+    .catch((err) => {
+      alert("Error checking availability.");
+      console.error(err);
+    });
+});
+
+function closePopup() {
+  document.getElementById("contactPopup").style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch('get-room-availability.php')
+    .then(response => response.json())
+    .then(data => {
+      let output = '';
+      for (const [category, left] of Object.entries(data)) {
+        const status = left > 0 ? `(${left} Left)` : '(Filled)';
+        output += `${category} ${status}<br>`;
+      }
+      document.getElementById('availability-info').innerHTML = output;
+    })
+    .catch(error => {
+      console.error('Error fetching room availability:', error);
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- plugin js -->
     <script src="assets/js/plugins.min.js"></script>

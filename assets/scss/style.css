@@ -5310,18 +5310,15 @@ textarea:focus-visible, input:focus-visible {
 }
 
 .banner__area.is__home__five {
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
-          clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
 }
 @media screen and (max-width: 992px) {
   .banner__area.is__home__five {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
   }
 }
 .banner__area.is__home__five .banner__content {
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
-          clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 89.246% 91.898%, 78.025% 86.489%, 66.575% 83.438%, 55.133% 82.41%, 43.939% 83.071%, 33.229% 85.087%, 23.243% 88.122%, 14.217% 91.842%, 6.39% 95.913%, 0% 100%);
   height: 940px;
   position: relative;
   padding-top: 105px;
@@ -5333,16 +5330,14 @@ textarea:focus-visible, input:focus-visible {
 }
 @media screen and (max-width: 992px) {
   .banner__area.is__home__five .banner__content {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
     height: 100%;
     padding-bottom: 100px;
   }
 }
 @media screen and (max-width: 768px) {
   .banner__area.is__home__five .banner__content {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
     height: 100%;
   }
 }
@@ -5680,8 +5675,7 @@ textarea:focus-visible, input:focus-visible {
 .about.is__home__five .about__positioned__images .image__1 {
   position: absolute;
   left: -28%;
-  -webkit-clip-path: polygon(69.249% 0%, 0% 0%, 0% 100%, 99.939% 100%, 99.939% 50%, 69.249% 50%, 69.249% 0%);
-          clip-path: polygon(69.249% 0%, 0% 0%, 0% 100%, 99.939% 100%, 99.939% 50%, 69.249% 50%, 69.249% 0%);
+  clip-path: polygon(69.249% 0%, 0% 0%, 0% 100%, 99.939% 100%, 99.939% 50%, 69.249% 50%, 69.249% 0%);
   top: -195px;
 }
 @media screen and (max-width: 1200px) {
@@ -8148,13 +8142,11 @@ textarea:focus-visible, input:focus-visible {
 .service.is__home__five {
   padding-top: 190px;
   padding-bottom: 80px;
-  -webkit-clip-path: polygon(100% 0%, 100% 99.953%, 0% 99.953%, 0% 0%, 0% 0%, 11.01% 4.616%, 22.155% 7.785%, 33.299% 9.667%, 44.309% 10.418%, 55.049% 10.196%, 65.385% 9.158%, 75.183% 7.461%, 84.308% 5.265%, 92.625% 2.725%, 100% 0%);
-          clip-path: polygon(100% 0%, 100% 99.953%, 0% 99.953%, 0% 0%, 0% 0%, 11.01% 4.616%, 22.155% 7.785%, 33.299% 9.667%, 44.309% 10.418%, 55.049% 10.196%, 65.385% 9.158%, 75.183% 7.461%, 84.308% 5.265%, 92.625% 2.725%, 100% 0%);
+  clip-path: polygon(100% 0%, 100% 99.953%, 0% 99.953%, 0% 0%, 0% 0%, 11.01% 4.616%, 22.155% 7.785%, 33.299% 9.667%, 44.309% 10.418%, 55.049% 10.196%, 65.385% 9.158%, 75.183% 7.461%, 84.308% 5.265%, 92.625% 2.725%, 100% 0%);
 }
 @media screen and (max-width: 768px) {
   .service.is__home__five {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
     padding-top: 100px;
   }
 }
@@ -9479,14 +9471,12 @@ textarea:focus-visible, input:focus-visible {
 }
 
 .rts__footer.is__home__five.has__shape {
-  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 0%, 11.311% 5.8%, 22.588% 9.759%, 33.732% 12.084%, 44.65% 12.981%, 55.244% 12.659%, 65.419% 11.323%, 75.078% 9.183%, 84.125% 6.444%, 92.464% 3.314%, 100% 0%);
-          clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 0%, 11.311% 5.8%, 22.588% 9.759%, 33.732% 12.084%, 44.65% 12.981%, 55.244% 12.659%, 65.419% 11.323%, 75.078% 9.183%, 84.125% 6.444%, 92.464% 3.314%, 100% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 0%, 11.311% 5.8%, 22.588% 9.759%, 33.732% 12.084%, 44.65% 12.981%, 55.244% 12.659%, 65.419% 11.323%, 75.078% 9.183%, 84.125% 6.444%, 92.464% 3.314%, 100% 0%);
   padding-top: 135px;
 }
 @media screen and (max-width: 768px) {
   .rts__footer.is__home__five.has__shape {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
     padding-top: 100px;
   }
 }

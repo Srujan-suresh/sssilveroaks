@@ -1,0 +1,10 @@
+Array
+(
+    [check_in] => 09-07-2025
+    [check_out] => 10-07-2025
+    [adult] => 1
+    [child] => 1
+    [name] => nn
+    [phone] => 32
+    [location] => eee
+)
