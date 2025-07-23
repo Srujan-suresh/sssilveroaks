@@ -102,7 +102,7 @@
                 <!-- Logo (keeps position) -->
                 <div class="main__logo">
                     <a href="index.html">
-                        <img class="logo__class" src="assets/newimages/final logo-01.jpg" alt="moonlit" style="width: 129px; height: 100px;">
+                        <img class="logo__class" src="assets/newimages/final logo-01.jpg" alt="moonlit" style="width: 119px; height: 90px;">
                     </a>
                 </div>
 
@@ -167,161 +167,134 @@
 </header>
 
     <!-- header area end -->
-
-   <style>/* 1. Make video container responsive */
-    /* Ensure video fills background */
-
-    
-.banner__slider__image {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.banner__slider__image video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* Overlay container (banner content area) */
-/* Overlay container (Center the content over the video) */
-.banner__slide__overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  /* Center horizontally and vertically */
-  width: 100%; /* Make it take full width */
-  height: 100%; /* Make it take full height */
-  z-index: 2;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-/* Content box (centered content) */
-.banner__slide__content {
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
-
-.banner__slide__content h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.banner__slide__content .sub__text {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.theme-btn.btn-style.fill.no-border {
-  background-color: #ab8a62;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-}
-
-
-/* Booking section margin fix for scroll */
-#booking-section {
-  scroll-margin-top: 300px;
-  z-index: 5;
-  position: relative;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .banner__slide__content h2 {
-    font-size: 1.75rem;
-  }
-
-  .banner__slide__content .sub__text {
-    font-size: 1rem;
-  }
-
-  .theme-btn.btn-style.fill.no-border {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner__slide__content h2 {
-    font-size: 1.4rem;
-  }
-
-  .banner__slide__content .sub__text {
-    font-size: 0.95rem;
-  }
-
-  .theme-btn.btn-style.fill.no-border {
-    padding: 8px 18px;
-    font-size: 0.9rem;
-  }
-}
-
-    </style>
-<!-- Swiper Slide -->
-<div class="swiper-slide">
-    <div class="banner__slider__image">
-      <video autoplay muted loop playsinline>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+   
+        .banner__slider__image {
+          position: relative;
+          width: 100%;
+          height: 100vh; /* Full viewport height */
+          overflow: hidden;
+        }
+      
+        .banner__slider__image img,
+        .banner__slider__image video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+      
+        .banner__slide__overlay {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .banner__slide__content {
+          text-align: center;
+          color: white;
+          padding: 20px;
+        }
+      
+        .banner__slide__content h2 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+      
+        .banner__slide__content .sub__text {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+        }
+      
+        .theme-btn.btn-style.fill.no-border {
+          background-color: #ab8a62;
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 4px;
+          text-decoration: none;
+          font-weight: 600;
+          display: inline-block;
+        }
+      
+        #booking-section {
+          scroll-margin-top: 300px;
+          z-index: 5;
+          position: relative;
+        }
+      
+        @media (max-width: 768px) {
+          .banner__slide__content h2 {
+            font-size: 1.75rem;
+          }
+      
+          .banner__slide__content .sub__text {
+            font-size: 1rem;
+          }
+      
+          .theme-btn.btn-style.fill.no-border {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+          }
+        }
+      
+        @media (max-width: 480px) {
+          .banner__slide__content h2 {
+            font-size: 1.4rem;
+          }
+      
+          .banner__slide__content .sub__text {
+            font-size: 0.95rem;
+          }
+      
+          .theme-btn.btn-style.fill.no-border {
+            padding: 8px 18px;
+            font-size: 0.9rem;
+          }
+        }
+      </style>
+      
+      <div class="swiper-slide">
+        <div class="banner__slider__image">
+          <img src="assets/newimages/Artboarddd 7.jpg" alt="Banner Image">
+        </div>
+         <!-- <video autoplay muted loop playsinline>
         <source src="assets/newimages/WhatsApp Video 2025-07-21 at 12.06.21 PM.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video>
-    </div>
-  
-    <!-- Banner Content (Over video) -->
-    <div class="container banner__slide__overlay">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="banner__slide__content">
-            <span class="h6 subtitle__icon">Welcome to SS Silver Oaks</span>
-            <h2 style="color: #fff;">Experience Tranquility Amidst the Hills of Yercaud</h2>
-            <p class="sub__text">From eco-friendly cottages to scenic views, SS Silver Oaks provides a refreshing break from city life with personalized hospitality.</p>
-            <a href="room-one.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
+      </video> -->
+      
+        <div class="container banner__slide__overlay">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="banner__slide__content">
+                <span class="h6 subtitle__icon">Welcome to SS Silver Oaks</span>
+                <h2 style="color: #fff;">Experience Tranquility Amidst the Hills of Yercaud</h2>
+                <p class="sub__text">From eco-friendly cottages to scenic views, SS Silver Oaks provides a refreshing break from city life with personalized hospitality.</p>
+                <a href="room-one.html" class="theme-btn btn-style fill no-border"><span>Discover Room</span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-            </div>
-            <div class="rts__slider__nav">
-                <div class="rts__slide">
-                    <div class="next">
-                        <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.255 9.75546H39.0404C39.7331 9.75546 40.2927 10.3151 40.2927 11.0078C40.2927 11.7005 39.7331 12.2601 39.0404 12.2601H4.28018L11.8803 19.8603C12.3695 20.3495 12.3695 21.1439 11.8803 21.6331C11.3911 22.1223 10.5967 22.1223 10.1075 21.6331L0.366619 11.8923C0.00657272 11.5322 -0.0990982 10.9961 0.0965805 10.5264C0.292259 10.0607 0.750149 9.75546 1.255 9.75546Z" fill="#F1F1F1" />
-                            <path d="M11.0077 0.00274277C11.3286 0.00274277 11.6495 0.124063 11.8921 0.370618C12.3813 0.859813 12.3813 1.65426 11.8921 2.14346L2.13955 11.896C1.65036 12.3852 0.855906 12.3852 0.366712 11.896C-0.122483 11.4068 -0.122483 10.6124 0.366712 10.1232L10.1193 0.370618C10.3658 0.124063 10.6868 0.00274277 11.0077 0.00274277Z" fill="#F1F1F1" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="rts__slide">
-                    <div class="prev">
-                        <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M39.0377 12.2445L1.25234 12.2445C0.559636 12.2445 -2.04305e-06 11.6849 -1.92194e-06 10.9922C-1.80082e-06 10.2995 0.559637 9.73987 1.25234 9.73987L36.0125 9.73987L28.4124 2.13974C27.9232 1.65055 27.9232 0.856096 28.4124 0.366901C28.9016 -0.122294 29.6961 -0.122293 30.1853 0.366901L39.9261 10.1077C40.2861 10.4678 40.3918 11.004 40.1961 11.4736C40.0005 11.9393 39.5426 12.2445 39.0377 12.2445Z" fill="#F1F1F1" />
-                            <path d="M29.2852 21.9973C28.9643 21.9973 28.6433 21.8759 28.4007 21.6294C27.9115 21.1402 27.9115 20.3457 28.4007 19.8565L38.1533 10.104C38.6425 9.61476 39.4369 9.61476 39.9261 10.104C40.4153 10.5932 40.4153 11.3876 39.9261 11.8768L30.1736 21.6294C29.927 21.8759 29.6061 21.9973 29.2852 21.9973Z" fill="#F1F1F1" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+      
     <!-- banner area end -->
 
-
+   
 <style>#booking-section {
     scroll-margin-top: 300px; /* adjust to match header height */
   }
@@ -1183,7 +1156,7 @@
 
 
 
-
+<!-- 
 
 
 <div class="rts__section pb-120 video video__full">
@@ -1224,7 +1197,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- special section end -->
 
